@@ -1,0 +1,17 @@
+.body { 
+    font-family: "Poppins" !important;
+    font-size: 1rem;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    line-height: 1rem;
+    letter-spacing: 3px;
+
+
+
+    color: white;
+    text-align: center;
+    z-index: 2;
+    align-items: left;
+    margin-top: 1rem;
+}

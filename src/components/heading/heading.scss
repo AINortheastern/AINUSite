@@ -1,0 +1,16 @@
+.heading {
+    font-family: "Poppins" !important;
+    font-weight: bold;
+    font-size: 2rem;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    line-height: 3rem;
+    letter-spacing: 5px;
+
+    align-items: center;
+    color: white;
+    margin-top: 15%;
+    text-align: center;
+    z-index: 2;
+  }

@@ -1,0 +1,38 @@
+.eboardContainer { 
+    position: relative;
+
+}
+.text { 
+    margin-right: 20px; 
+}
+
+.about-title { 
+    color: white;
+    margin-top: 15%;
+    text-align: left;
+    z-index: 2;
+}
+
+.about-body { 
+    @extend .about-title;
+    align-items: left;
+    margin-top: 0%;
+}
+
+.about-image { 
+    width: 70vh;
+    height: 50vh; 
+}
+
+.members-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+ }
+  
+  .member-item {
+    flex: 1 1 30%; /*grow | shrink | basis */
+
+  }
