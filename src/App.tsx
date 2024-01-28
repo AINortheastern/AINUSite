@@ -3,17 +3,20 @@ import './App.css';
 import { Home } from "./ainu-client/homepage/Home";
 import { DarkThemeToggle, Footer } from 'flowbite-react';
 import logo from './assets/branding/nuai_logo.png';
+import CssBaseline from '@material-ui/core/CssBaseline';
 function App() {
   document.title = "AINU"
   return (
-    <div className="App">
+    <>
+    <CssBaseline />
+    <div className="App" style={{width:'100%',}}>
       <Router>
         <Routes>
           <Route path="*" element={<Home />} />
         </Routes>
       </Router>
       <div style={{position: 'relative'}}>
-      <Footer container className='bg-gray-800 p-4'>
+      <Footer container>
         <Footer.Brand
           src={logo}
         />
@@ -27,6 +30,7 @@ function App() {
     </Footer>
     </div>
     </div>
+    </>
   );
 }
 

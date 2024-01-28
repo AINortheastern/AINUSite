@@ -1,27 +1,63 @@
 .container {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-  display: block; 
-}
-.innerContainer { 
+    width: 100%;
+    //margin: 10vh 40vh;
+    margin-top: 40vh;
+    margin-bottom: 40vh; 
+    margin-left: 10vh;
+    margin-right: 10vh;
     position: relative;
-}
+    display: block; 
+  }
+  
+  .innerContainer { 
+      position: relative;
+  }
+  
+  .textContainer { 
+      display: flex;
+      border-bottom: .2rem solid #333 !important;
+  }
+  
+  
+  .titleBefore { 
+      text-align: left;
+      font-size: 7rem !important;
+      color: #E2F8FF; 
+      margin-right: 2rem;
+  }
+  .titleAfter { 
+      @extend .titleBefore;
+      color: #902124;
+  }
+  
+  .bodyText { 
+      font-size: 3.5rem !important;
+      text-align: left;
+  }
+  
+  
+      
+  .logo { 
+      width: 25vh;
+      height: 25vh;
+      z-index: 2;
+      position: relative;
+  }
+  
+  .footer { 
+      position: relative;
+  }
 
 
-.title { 
-    border-bottom: 2px solid #333 !important;
-}
-
-
-    
-.logo { 
-    width: 50vh;
-    height: 50vh;
-    z-index: 2;
-    position: relative;
-}
-
-.footer { 
-    position: relative;
-}
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity .8s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }

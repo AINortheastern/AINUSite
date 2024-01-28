@@ -9,7 +9,7 @@ const Eboard = () => {
     ["Vice President", "Charles Ciampa"],
     ["Finance", "Brandon Butler"],
     ["Marketing Head", "Vacant"],
-    ["Marketing Communication Specialist", "Vacant"],
+    ["Marketing Comm. Specialist", "Vacant"],
     ["Outreach", "Kerissa Duliga"],
     ["Web Developer/Designer", "Arnav Narain"],
     ["Content Creator", "Mihalis Koutouvos"],
