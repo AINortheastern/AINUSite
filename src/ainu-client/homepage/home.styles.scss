@@ -1,16 +1,6 @@
 .mainContainer {
-    width: 100%;
-    margin-top: 30vh;
-    margin-bottom: 40vh; 
-    padding-left: 10vh;
-    padding-right: 10vh;
     position: relative;
     display: block; 
-
-    @media (max-width: 576px) { 
-        margin: 0;
-        padding: 5px;
-    }
   }
   
   .innerContainer { 

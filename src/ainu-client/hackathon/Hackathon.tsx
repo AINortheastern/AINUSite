@@ -62,7 +62,7 @@ const Hackathon = () => {
       <div className="hackathonContainer">
 
         <Container fluid className="hackathonInnerContainer">
-          <Row xs={1} md={2} lg={2}>
+          <Row className="justify-content-start">
           <Col>
             <BodyText className="bodyText">March 29 - 30, 2024 @ Northeastern University</BodyText>
             <Heading className="title">AINU x Babson Hackathon</Heading>
