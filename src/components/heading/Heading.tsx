@@ -9,7 +9,7 @@ interface HeadingProps {
 
 const Heading = ({ children, className = "" }: HeadingProps) => {
   return (
-    <h1 className={`heading ${className}`}>{children}</h1>
+    <h1 className={`headingText ${className}`}>{children}</h1>
   );
 };
 

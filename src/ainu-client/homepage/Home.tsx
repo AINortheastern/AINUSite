@@ -38,7 +38,7 @@ const Home = () => {
   const particlesContainerProps: IProps = {};
 
   return (
-    <div className="container">
+    <div className="mainContainer">
       <ParticlesContainer {...particlesContainerProps} />
       <FadeInSection>
       <div className="innerContainer">

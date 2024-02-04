@@ -3,16 +3,19 @@ import './App.css';
 import { Home } from "./ainu-client/homepage/Home";
 import { DarkThemeToggle, Footer } from 'flowbite-react';
 import logo from './assets/branding/nuai_logo.png';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { Hackathon } from "./ainu-client/hackathon/Hackathon";
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 function App() {
   document.title = "AINU"
   return (
     <>
-    <CssBaseline />
-    <div className="App" style={{width:'100%',}}>
       <Router>
         <Routes>
           <Route path="*" element={<Home />} />
+          <Route path="/hackathon" element={<Hackathon />} />
         </Routes>
       </Router>
       <div style={{position: 'relative'}}>
@@ -28,7 +31,6 @@ function App() {
           <Footer.Link href="#">Contact</Footer.Link>
         </Footer.LinkGroup>
     </Footer>
-    </div>
     </div>
     </>
   );

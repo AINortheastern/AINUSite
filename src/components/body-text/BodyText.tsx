@@ -9,7 +9,7 @@ interface BodyTextProps {
 
 const BodyText = ({ children, className = "" }: BodyTextProps) => {
     return (
-      <p className={`body ${className}`}>{children}</p>
+      <p className={`bodyText ${className}`}>{children}</p>
     );
   };
   
