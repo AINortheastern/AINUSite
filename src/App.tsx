@@ -48,9 +48,7 @@ function App() {
       <>
 
       <Modal className="my-modal" show={menuOpen} onHide={handleMenuClick} centered aria-labelledby="contained-modal-title-vcenter">
-        <Modal.Header closeButton style={{
-        }}
-        className="px-4">
+        <Modal.Header closeButton>
           <Modal.Title style={{width: '100%'}}>
             <Heading className="modal-text-heading">Menu</Heading>
           </Modal.Title>

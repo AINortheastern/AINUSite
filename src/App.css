@@ -16,6 +16,10 @@
 
     cursor: pointer; 
 
+    @media (max-width: 767px) {
+        display: none; /* Hide the component on screens smaller than 768px (typical for mobile) */
+    }
+
 }
 
 .my-modal .modal-content {
