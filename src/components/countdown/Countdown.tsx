@@ -1,61 +1,68 @@
-import React from "react";
-import "./countdown.scss"
+import React, { useState, useEffect } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Heading } from '../heading/Heading';
 
-type Props = {
-    startTimeInSeconds: number;
+import './countdown.scss';
+import { BodyText } from '../body-text/BodyText';
+
+interface CountdownTimerProps {
+  targetDate: Date;
 }
 
-type State = {
-    timeRemainingInSeconds: number;
-}
+const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
+  const calculateTimeLeft = () => {
+    const difference = +targetDate - +new Date();
+    let timeLeft = {};
 
-
-export class CountdownTimer extends React.Component<Props, State> {
-    private timer: any;
-  
-    constructor(props: Props) {
-      super(props);
-      this.state = {
-        timeRemainingInSeconds: props.startTimeInSeconds
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
       };
     }
-  
-    decrementTimeRemaining = () => {
-      if (this.state.timeRemainingInSeconds > 0) {
-        this.setState({
-          timeRemainingInSeconds: this.state.timeRemainingInSeconds - 1
-        });
-      } else {
-        clearInterval(this.timer!);
-      }
-    };
-  
-    componentDidMount() {
-      this.timer = setInterval(() => {
-        this.decrementTimeRemaining();
-      }, 1000);
-    }
-  
-    render() {
-      return (
-        <div className="countdown-timer">
-          <div className="countdown-timer__circle">
-            <svg>
-              <circle
-                r="24"
-                cx="26"
-                cy="26"
-                style={{
-                  animation: `countdown-animation ${this.props
-                    .startTimeInSeconds}s linear`
-                }}
-              />
-            </svg>
-          </div>
-          <div className="countdown-timer__text">
-            {this.state.timeRemainingInSeconds}s
-          </div>
-        </div>
-      );
-    }
-  }
+
+    return timeLeft as { days: number; hours: number; minutes: number; seconds: number };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  const addLeadingZero = (value: number) => {
+    return value < 10 ? `0${value}` : value;
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  });
+
+
+  return (
+    <Container className="justify-content-center" style={{marginTop: '4rem', width:'fit-content'}}>
+      <Row xs={1} sm={2} md={4}>
+        <Col className="column">
+          <Heading className="countdown-number">{addLeadingZero(timeLeft.days)} </Heading>
+          <BodyText className="countdown-unit">Days</BodyText>
+        </Col>
+        <Col className="column">
+          <Heading className="countdown-number">{addLeadingZero(timeLeft.hours)} </Heading>
+          <BodyText className="countdown-unit">Hours</BodyText>
+        </Col>
+        <Col className="column">
+          <Heading className="countdown-number">{addLeadingZero(timeLeft.minutes)} </Heading>
+          <BodyText className="countdown-unit">Minutes</BodyText>
+        </Col>
+        <Col className="column">
+          <Heading className="countdown-number">{addLeadingZero(timeLeft.seconds)} </Heading>
+          <BodyText className="countdown-unit">Seconds</BodyText>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export { CountdownTimer } ;
