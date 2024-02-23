@@ -26,7 +26,7 @@ function App() {
     setMenuOpen(!menuOpen)
   }
   return (
-    <>
+    <div className="app">
     <div className="hamburger-menu" onClick={() => {setMenuOpen(!menuOpen)}}>
       <Heading className="hamburger-text">MENU</Heading>
           <HamburgerMenu
@@ -73,7 +73,6 @@ function App() {
           <Route path="/hackathon" element={<Hackathon />} />
         </Routes>
       </Router>
-
     </div>
     <div style={{position: 'relative'}}>
     <Footer container>
@@ -90,7 +89,7 @@ function App() {
   </Footer>
   </div>
 
-  </>
+  </div>
   );
 }
 

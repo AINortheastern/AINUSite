@@ -47,8 +47,8 @@ const Hackathon = () => {
    type QnA = [string[], string[]];
 
     const data: string[][] = [
-                          ['Who is this for?', 'This hackathon is for all students at Northeastern University and Babson College. No need for any prior experience in AI or Computer Science!'],
-                          ['Will you provide travel reimbursement?', 'At this time, this hackathon is only opened to students from Northeastern University and Babson College, so no travel reimbursement will be provided.'],
+                          ['Who is this for?', 'This hackathon is for all current university students. No need for any prior experience in AI or Computer Science!'],
+                          ['Will you provide travel reimbursement?', 'At this time, no travel reimbursement will be provided.'],
                           [ 'Will there be awards/food/swag?', 'Yes!'],
                           [ 'Does it cost anything?', 'Admission is completely free for all eligible students.'],
                           [ 'How many people can be on my team?', 'You can form a team with 4-10 people.'],
@@ -58,6 +58,7 @@ const Hackathon = () => {
   ]
   const targetDate = new Date('2024-03-22T23:59:00');
     return (
+      <div className="outerContainer">
       <div className="backgroundDiv">
             <ParticlesContainer {...particlesContainerProps}/>
       <div className="hackathonContainer">
@@ -67,7 +68,6 @@ const Hackathon = () => {
             <BodyText className="bodyText">March 30 - 31, 2024 @ Northeastern University</BodyText>
             <Heading className="title">AINU x Babson Hackathon</Heading>
             <BodyText className="bodyText">From Concept to Code: 30 Hours of Intense Project Development.</BodyText>
-            <BodyText className="bodyText">Open to students at Northeastern University and Babson College.</BodyText>
             </Col>
           </Row>
           <Button color="dark" disabled={true} style={{margin: '1rem 0rem'}}>Applications Closed!</Button>
@@ -124,6 +124,7 @@ const Hackathon = () => {
           </Col>
         </Row>
         </Container>
+    </div>
     </div>
     </div>
     )
