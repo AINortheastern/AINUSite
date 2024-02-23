@@ -67,7 +67,7 @@ const Hackathon = () => {
           <Row className="justify-content-start">
           <Col>
             <BodyText className="bodyText">March 30 - 31, 2024 @ Northeastern University</BodyText>
-            <Heading className="title">AINU x Babson Hackathon</Heading>
+            <Heading className="title">AINU x BAIC Hackathon</Heading>
             <BodyText className="bodyText">From Concept to Code: 30 Hours of Intense Project Development.</BodyText>
             </Col>
           </Row>
@@ -84,7 +84,7 @@ const Hackathon = () => {
           <Row xs={1} md={2} lg={2}>
           <Col style={{margin: '5rem 0rem'}}>
             <Heading className="title">About</Heading>
-            <BodyText className="bodyText">The AINU x Babson hackathon is looking to bring 
+            <BodyText className="bodyText">The AINU x BAIC hackathon is looking to bring 
             together passionate, inspired, innovated, and talented students to find solutions for a variety of problems.</BodyText>
             <br></br>
             <BodyText className="bodyText">This year, we're opening up the hackathon to all enrolled college students who study in Boston!</BodyText>
