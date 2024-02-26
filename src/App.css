@@ -15,7 +15,7 @@
     margin-top: 2rem;
     margin-right: 2rem;
 
-    border: 2px solid #E2F8FF;
+    border: 2px solid #395453;
     border-radius: 0.5rem;
 
     cursor: pointer; 
@@ -53,7 +53,7 @@
 
 .hamburger-text {
     margin-right: 1rem; 
-    color: white; 
+    color: #395453; 
     margin: 0rem 1rem 0rem 0rem; 
 }
 

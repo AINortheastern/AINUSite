@@ -3,7 +3,7 @@
     text-align: left;
     margin-bottom: 0px;
     margin-top: 0px;
-    color: white; 
+    color: #7c9695; 
 }
 
 .title-effect { 
@@ -11,7 +11,7 @@
     font-size: 2rem !important;
     margin-right: 2rem;
     cursor: pointer;
-    color: white; 
+    color: #395453; 
     margin-bottom: 1rem;
 }
 
@@ -23,7 +23,7 @@
 .accordion-item-active { 
     @extend .accordion-item;
     border-radius: 1.5rem;
-    background-color: #A4C3E0;
+    background-color: #f6f4f2;
     padding: 1rem;
 
 }

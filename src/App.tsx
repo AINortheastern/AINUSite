@@ -36,7 +36,7 @@ function App() {
           height={30}
           strokeWidth={3}
           rotate={0}
-          color='white'
+          color='black'
           borderRadius={0}
           animationDuration={0.5}
       />

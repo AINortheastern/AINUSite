@@ -18,6 +18,7 @@ import Particles from 'react-tsparticles';
 import React from 'react';
 import { loadLinksPreset } from 'tsparticles-preset-links';
 import type { Engine } from "tsparticles-engine";
+import logo from "../../assets/branding/hackathon.png";
 
 interface IProps {
 }
@@ -29,7 +30,7 @@ class ParticlesContainer extends React.PureComponent<IProps> {
   render() {
     const options = {
       background: {
-        color: "#6DA7CC",
+        color: "#f0eee6",
       },
       preset: "links",
     };
@@ -64,6 +65,7 @@ const Hackathon = () => {
             <ParticlesContainer {...particlesContainerProps}/>
       <div className="hackathonContainer">
         <Container fluid className="hackathonInnerContainer">
+        <img src={logo} alt="AINU Logo" className="hackathonLogo"/>
           <Row className="justify-content-start">
           <Col>
             <BodyText className="bodyText">March 30 - 31, 2024 @ Northeastern University</BodyText>
@@ -72,8 +74,8 @@ const Hackathon = () => {
             </Col>
           </Row>
           <Row>
-            <Button className="mr-2 mb-2" gradientMonochrome="cyan" onClick={redirectToIndividual} style={{margin: '1rem 1rem', width: '14rem'}}>Individual Application</Button>
-            <Button className="mb-2" gradientMonochrome="cyan" onClick={redirectToTeam} style={{margin: '1rem 1rem', width: '14rem'}}>Team Application</Button>
+            <Button className="mr-2 mb-2" gradientDuoTone="redToYellow" onClick={redirectToIndividual} style={{margin: '1rem 1rem', width: '14rem'}}>Individual Application</Button>
+            <Button className="mb-2" gradientDuoTone="redToYellow" onClick={redirectToTeam} style={{margin: '1rem 1rem', width: '14rem'}}>Team Application</Button>
           </Row>
           <Row className="justify-content-center" style={{alignItems: 'center', textAlign: 'center', width: '100%'}}>
             <BodyText className="countdownHeading">Application closes in....</BodyText>
