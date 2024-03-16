@@ -103,7 +103,7 @@ const Hackathon = () => {
           </Col>
           <Col className="justify-content-center" style={{margin: '5rem 0rem'}}>
             <Heading className="title">Schedule</Heading>
-            <BodyText className="bodyText">The hackathon will occur over 2 days from 10:00 A.M. March 30th to 6:00 P.M. March 31st (Exact details TBA)!</BodyText>
+            <BodyText className="bodyText">The hackathon will occur over 2 days from 10:00 A.M. - 9:00 P.M. March 30th and 10 A.M. - 7:00 P.M. March 31st</BodyText>
           </Col>
           <Col className="justify-content-center" style={{margin: '5rem 0rem'}}>
             <Heading className="title">Sponsor</Heading>
