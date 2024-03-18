@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Heading } from '../heading/Heading';
+import React, { useState, useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { Heading } from "../heading/Heading";
 
-import './countdown.scss';
-import { BodyText } from '../body-text/BodyText';
+import "./countdown.scss";
+import { BodyText } from "../body-text/BodyText";
 
 interface CountdownTimerProps {
   targetDate: Date;
@@ -19,11 +19,16 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        seconds: Math.floor((difference / 1000) % 60),
       };
     }
 
-    return timeLeft as { days: number; hours: number; minutes: number; seconds: number };
+    return timeLeft as {
+      days: number;
+      hours: number;
+      minutes: number;
+      seconds: number;
+    };
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -40,24 +45,34 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     return () => clearTimeout(timer);
   });
 
-
   return (
-    <Container className="justify-content-center" style={{marginTop: '4rem', width:'fit-content'}}>
+    <Container
+      className="justify-content-center"
+      style={{ marginTop: "4rem", width: "fit-content" }}
+    >
       <Row xs={1} sm={2} md={4}>
         <Col className="column">
-          <Heading className="countdown-number">{addLeadingZero(timeLeft.days)} </Heading>
+          <Heading className="countdown-number">
+            {addLeadingZero(timeLeft.days)}{" "}
+          </Heading>
           <BodyText className="countdown-unit">Days</BodyText>
         </Col>
         <Col className="column">
-          <Heading className="countdown-number">{addLeadingZero(timeLeft.hours)} </Heading>
+          <Heading className="countdown-number">
+            {addLeadingZero(timeLeft.hours)}{" "}
+          </Heading>
           <BodyText className="countdown-unit">Hours</BodyText>
         </Col>
         <Col className="column">
-          <Heading className="countdown-number">{addLeadingZero(timeLeft.minutes)} </Heading>
+          <Heading className="countdown-number">
+            {addLeadingZero(timeLeft.minutes)}{" "}
+          </Heading>
           <BodyText className="countdown-unit">Minutes</BodyText>
         </Col>
         <Col className="column">
-          <Heading className="countdown-number">{addLeadingZero(timeLeft.seconds)} </Heading>
+          <Heading className="countdown-number">
+            {addLeadingZero(timeLeft.seconds)}{" "}
+          </Heading>
           <BodyText className="countdown-unit">Seconds</BodyText>
         </Col>
       </Row>
@@ -65,4 +80,4 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   );
 };
 
-export { CountdownTimer } ;
+export { CountdownTimer };

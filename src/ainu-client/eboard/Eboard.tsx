@@ -2,10 +2,9 @@ import { BodyText } from "../../components/body-text/BodyText";
 import { Heading } from "../../components/heading/Heading";
 import "./eboard.scss";
 
-
 const Eboard = () => {
-
-    const members = [["President", "Alexzander Sansiveri"],
+  const members = [
+    ["President", "Alexzander Sansiveri"],
     ["Vice President", "Charles Ciampa"],
     ["Finance", "Brandon Butler"],
     ["Marketing Head", "Vacant"],
@@ -16,24 +15,22 @@ const Eboard = () => {
     ["Social Media Manager", "Reyna Singh"],
     ["Graphic Designer", "Julie Kim"],
     ["Event Coordinator", "Aarav Gambhir"],
-    ["Project Lead", "Dhruv Reddy Tekulapalli"]]
+    ["Project Lead", "Dhruv Reddy Tekulapalli"],
+  ];
 
-                
-  
-    return (
+  return (
     <div className="eboardContainer">
-        <Heading className="about-title">E-Board</Heading>
-        <div className="members-list">
+      <Heading className="about-title">E-Board</Heading>
+      <div className="members-list">
         {members.map((member, index) => (
-        <div key={index} className="member-item">
-          <Heading>{member[0]}</Heading>
-          <BodyText>{member[1]}</BodyText>
-        </div>
-      ))}
+          <div key={index} className="member-item">
+            <Heading>{member[0]}</Heading>
+            <BodyText>{member[1]}</BodyText>
+          </div>
+        ))}
       </div>
     </div>
-    );
-  }
-  
-  export { Eboard } 
-  
+  );
+};
+
+export { Eboard };

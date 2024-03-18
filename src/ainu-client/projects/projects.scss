@@ -1,27 +1,27 @@
-.projectContainer { 
-    position: relative;
-    display: flex;
-    margin-top: 20vh;
-    justify-content: space-between;
+.projectContainer {
+  position: relative;
+  display: flex;
+  margin-top: 20vh;
+  justify-content: space-between;
 }
-.text { 
-    margin-right: 20px; 
-}
-
-.project-title { 
-    color: white;
-    margin-top: 15%;
-    text-align: left;
-    z-index: 2;
+.text {
+  margin-right: 20px;
 }
 
-.project-body { 
-    @extend .project-title;
-    align-items: left;
-    margin-top: 0%;
+.project-title {
+  color: white;
+  margin-top: 15%;
+  text-align: left;
+  z-index: 2;
 }
 
-.project-image { 
-    width: 70vh;
-    height: 50vh; 
+.project-body {
+  @extend .project-title;
+  align-items: left;
+  margin-top: 0%;
+}
+
+.project-image {
+  width: 70vh;
+  height: 50vh;
 }

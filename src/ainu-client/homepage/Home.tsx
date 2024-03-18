@@ -11,10 +11,9 @@ import { About } from "../about/About";
 import { Projects } from "../projects/Projects";
 import { Eboard } from "../eboard/Eboard";
 import logo from "../../assets/branding/nuai_logo.png";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 
-interface IProps {
-}
+interface IProps {}
 class ParticlesContainer extends React.PureComponent<IProps> {
   async customInit(engine: Engine): Promise<void> {
     await loadLinksPreset(engine);
@@ -33,23 +32,24 @@ class ParticlesContainer extends React.PureComponent<IProps> {
 }
 
 const Home = () => {
-
-  // dont ask me what this is for 
+  // dont ask me what this is for
   const particlesContainerProps: IProps = {};
 
   return (
     <div className="mainContainer">
       <ParticlesContainer {...particlesContainerProps} />
       <FadeInSection>
-      <div className="innerContainer">
-        <img src={logo} alt="AINU Logo" className="logo" />
+        <div className="innerContainer">
+          <img src={logo} alt="AINU Logo" className="logo" />
 
-        <div className="textContainer">
-          <Heading className="titleBefore">AI</Heading>
-          <Heading className="titleAfter">Northeastern</Heading>
+          <div className="textContainer">
+            <Heading className="titleBefore">AI</Heading>
+            <Heading className="titleAfter">Northeastern</Heading>
+          </div>
+          <BodyText className="bodyText">
+            Home for Northeastern AI Enthusiasts
+          </BodyText>
         </div>
-        <BodyText className="bodyText">Home for Northeastern AI Enthusiasts</BodyText>
-      </div>
       </FadeInSection>
       <FadeInSection>
         <About />
@@ -62,9 +62,9 @@ const Home = () => {
       </FadeInSection>
     </div>
   );
-}
+};
 
-export { Home } 
+export { Home };
 
 interface FadeInSectionProps {
   children: React.ReactNode;
@@ -74,18 +74,18 @@ const FadeInSection: React.FC<FadeInSectionProps> = (props) => {
   const [isVisible, setVisible] = React.useState(true);
   const domRef = useRef<HTMLElement>(null);
   React.useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => setVisible(entry.isIntersecting));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => setVisible(entry.isIntersecting));
     });
     observer.observe(domRef.current!);
     return () => observer.unobserve(domRef.current!);
   }, []);
   return (
     <div
-      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
       ref={domRef as React.LegacyRef<HTMLDivElement>}
     >
       {props.children}
     </div>
   );
-}
+};

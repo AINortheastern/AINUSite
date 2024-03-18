@@ -1,54 +1,53 @@
-.outerContainer { 
-    margin-top: 20vh; 
+.outerContainer {
+  margin-top: 20vh;
 }
 
-.backgroundDiv { 
-    background-color: #f0eee6; 
+.backgroundDiv {
+  background-color: #f0eee6;
 }
 .hackathonContainer {
-    position: relative;
-    display: block; 
-  }
-.hackathonInnerContainer { 
-    padding-right: 15px;
-    padding-left: 15px;
-    @media (max-width: 576px) { 
-        padding: 5px;
-        width: 100%;
-    }
+  position: relative;
+  display: block;
 }
-
-.bodyText { 
-    font-size: 1.25rem !important;
-    text-align: left;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    color: #7c9695; 
-}
-
-.title { 
-    text-align: left;
-    font-size: 3rem !important;
-    margin-right: 2rem;
-    color: #395453; 
-}
-
-.hackathonLogo { 
-    max-width: 40%;
-}
-
-.image { 
+.hackathonInnerContainer {
+  padding-right: 15px;
+  padding-left: 15px;
+  @media (max-width: 576px) {
+    padding: 5px;
     width: 100%;
-    height: 100%;
-    border-radius: 1.5rem; 
+  }
+}
 
+.bodyText {
+  font-size: 1.25rem !important;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: #7c9695;
 }
-.links-background { 
-    @media (max-width: 767px) {
-          display: none; /* Hide the component on screens smaller than 768px (typical for mobile) */
-      }
+
+.title {
+  text-align: left;
+  font-size: 3rem !important;
+  margin-right: 2rem;
+  color: #395453;
 }
-.countdownHeading { 
-    text-align: center;
-    font-size: 2rem !important;
+
+.hackathonLogo {
+  max-width: 40%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+}
+.links-background {
+  @media (max-width: 767px) {
+    display: none; /* Hide the component on screens smaller than 768px (typical for mobile) */
+  }
+}
+.countdownHeading {
+  text-align: center;
+  font-size: 2rem !important;
 }
