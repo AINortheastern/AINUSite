@@ -32,7 +32,6 @@ class ParticlesContainer extends React.PureComponent<IProps> {
 }
 
 const Home = () => {
-  // dont ask me what this is for
   const particlesContainerProps: IProps = {};
 
   return (

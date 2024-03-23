@@ -1,5 +1,5 @@
 .app {
-  background-color: #6da7cc;
+  
 }
 
 .hamburger-menu {
@@ -60,7 +60,7 @@
   margin-bottom: 40vh;
   padding-left: 10vh;
   padding-right: 10vh;
-  position: relati.ve;
+  position: relative;
   display: block;
   @media (max-width: 576px) {
     margin: 0;

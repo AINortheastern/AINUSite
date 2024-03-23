@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Home } from "./ainu-client/homepage/Home";
-import { DarkThemeToggle, Footer } from "flowbite-react";
+import { Footer } from "flowbite-react";
 import logo from "./assets/branding/nuai_logo.png";
 import { Hackathon } from "./ainu-client/hackathon/Hackathon";
 
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import HamburgerMenu from "react-hamburger-menu";
 
 import "./App.css";
@@ -13,7 +12,6 @@ import { Heading } from "./components/heading/Heading";
 import { useState } from "react";
 
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
 import { BodyText } from "./components/body-text/BodyText";
 
 function App() {
@@ -94,10 +92,8 @@ function App() {
             year={2024}
           />
           <Footer.LinkGroup>
-            <Footer.Link href="#">About</Footer.Link>
-            <Footer.Link href="#">Privacy Policy</Footer.Link>
-            <Footer.Link href="#">Licensing</Footer.Link>
-            <Footer.Link href="#">Contact</Footer.Link>
+            <Footer.Link href="/home">About</Footer.Link>
+            <Footer.Link href="mailto:aiclub.neu@gmail.com">Contact</Footer.Link>
           </Footer.LinkGroup>
         </Footer>
       </div>

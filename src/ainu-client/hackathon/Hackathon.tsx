@@ -112,16 +112,9 @@ const Hackathon = () => {
                 gradientDuoTone="redToYellow"
                 onClick={redirectToIndividual}
                 style={{ margin: "1rem 1rem", width: "14rem" }}
+                disabled={true}
               >
-                Individual Application
-              </Button>
-              <Button
-                className="mb-2"
-                gradientDuoTone="redToYellow"
-                onClick={redirectToTeam}
-                style={{ margin: "1rem 1rem", width: "14rem" }}
-              >
-                Team Application
+                Applications Closed!
               </Button>
             </Row>
             <Row
@@ -133,11 +126,8 @@ const Hackathon = () => {
               }}
             >
               <BodyText className="countdownHeading">
-                Application closes in....
+                Application closed!
               </BodyText>
-              <div className="countdowntimer-container">
-                <CountdownTimer targetDate={targetDate} />
-              </div>
             </Row>
             <Row xs={1} md={2} lg={2}>
               <Col style={{ margin: "5rem 0rem" }}>
