@@ -16,7 +16,10 @@
 }
 
 .header {
-  padding: 3rem; 
+  @media (min-width: 768px) {
+    padding: 3rem; 
+    }
+
   border-bottom: 1px solid #7E7E7E;
 
 }
