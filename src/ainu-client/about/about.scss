@@ -1,5 +1,7 @@
 .aboutContainer {
-  padding: 10rem;
+  @media (min-width: 768px) {
+    padding: 10rem;
+    }
   align-items: center;
   justify-content: center;
   display: flex; 
