@@ -1,6 +1,6 @@
 import { BodyText } from "../../components/body-text/BodyText";
 import { Heading } from "../../components/heading/Heading";
-import group from "../../assets/images/group_1.jpg";
+import group from "../../assets/images/2024Kickoff_1.jpg";
 import "./about.scss";
 
 const About = () => {
