@@ -1,5 +1,7 @@
 .app {
-  
+}
+html, body {
+  overflow-x: hidden; /* Disables horizontal scrolling */
 }
 
 .hamburger-menu {
@@ -55,7 +57,7 @@
 }
 
 .total-container {
-  width: 100%;
+  /* width: 100%;
   margin-top: 10vh;
   margin-bottom: 40vh;
   padding-left: 10vh;
@@ -65,5 +67,5 @@
   @media (max-width: 576px) {
     margin: 0;
     padding: 5px;
-  }
+  } */
 }

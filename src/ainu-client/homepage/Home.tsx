@@ -10,48 +10,51 @@ import { BodyText } from "../../components/body-text/BodyText";
 import { About } from "../about/About";
 import { Projects } from "../projects/Projects";
 import { Eboard } from "../eboard/Eboard";
-import logo from "../../assets/branding/nuai_logo.png";
+import logo from "../../assets/branding/aineu_header.png";
 import ReactDOM from "react-dom";
-
-interface IProps {}
-class ParticlesContainer extends React.PureComponent<IProps> {
-  async customInit(engine: Engine): Promise<void> {
-    await loadLinksPreset(engine);
-  }
-
-  render() {
-    const options = {
-      background: {
-        color: "#6DA7CC",
-      },
-      preset: "links",
-    };
-
-    return <Particles options={options} init={this.customInit} />;
-  }
-}
+import RainbowButton from "../../components/rainbow-button/button";
+import { Row } from "react-bootstrap";
 
 const Home = () => {
-  const particlesContainerProps: IProps = {};
 
   return (
     <div className="mainContainer">
-      <ParticlesContainer {...particlesContainerProps} />
-      <FadeInSection>
-        <div className="innerContainer">
-          <img src={logo} alt="AINU Logo" className="logo" />
 
-          <div className="textContainer">
-            <Heading className="titleBefore">AI</Heading>
-            <Heading className="titleAfter">Northeastern</Heading>
-          </div>
-          <BodyText className="bodyText">
-            Home for Northeastern AI Enthusiasts
-          </BodyText>
-        </div>
-      </FadeInSection>
+      <div className="header">
+        <img src={logo} alt="AINU Logo" className="logo" />
+        <Heading className="mainSubheading"> Building Tomorrow's Intelligence Today </Heading>
+        <BodyText className="secondSubheading"> Northeastern's premier artificial intelligence student organization.</BodyText>
+      </div>
+      <center>
+        <a href="/hackathon">
+          <RainbowButton> 2024 AINU x Babson Hackathon</RainbowButton>
+        </a>
+
+      </center>
+
+      <center>
+        <FadeInSection>
+          <BodyText style={{ textAlign: 'center', marginTop: '5rem', marginBottom: '2rem' }} className="secondSubheading"> Important Links </BodyText>
+        </FadeInSection>
+        <FadeInSection>
+        <Row xs={1} md={3}>
+
+          <a href="https://forms.gle/sbLvQCE87BVajgm5A" style={{ textDecoration: 'none' }}>
+            <Heading className="gradient1"> Mailing List </Heading>
+          </a>
+          <a href="https://discord.gg/CJFMC6BNyz" style={{ textDecoration: 'none' }}>
+            <Heading className="gradient2"> Discord </Heading>
+          </a>
+          <a href="https://linktr.ee/ainortheastern" style={{ textDecoration: 'none' }}>
+            <Heading className="gradient3"> LinkTree </Heading>
+          </a>
+        </Row>
+        </FadeInSection>
+      </center>
+
       <FadeInSection>
         <About />
+
       </FadeInSection>
       <FadeInSection>
         <Projects />

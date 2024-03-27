@@ -1,9 +1,25 @@
 .mainContainer {
   position: relative;
   display: block;
-  margin-top: 20vh;
+  background-color: #0d0d0d;
+  padding: 2rem 3rem;
 }
 
+.mainSubheading { 
+  color: RGB(225, 225, 225);
+  margin-left: 2rem; 
+}
+
+.secondSubheading { 
+  color: #7E7E7E;
+  margin-left: 2rem; 
+}
+
+.header {
+  padding: 3rem; 
+  border-bottom: 1px solid #7E7E7E;
+
+}
 .innerContainer {
   position: relative;
 }
@@ -30,10 +46,7 @@
 }
 
 .logo {
-  width: 25vh;
-  height: 25vh;
-  z-index: 2;
-  position: relative;
+  margin-top: 10rem;
 }
 
 .footer {
@@ -53,4 +66,29 @@
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+.link { 
+  cursor: pointer;
+}
+
+.gradient1 {
+  @extend .link;
+  background-image: linear-gradient(to right, red, purple);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient2 {
+  @extend .link;
+  background-image: linear-gradient(to right, purple, lightblue);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.gradient3 {
+  @extend .link; 
+  background-image: linear-gradient(to right, lightblue, green);
+  -webkit-background-clip: text;
+  color: transparent;
 }

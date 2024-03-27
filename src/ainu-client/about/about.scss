@@ -1,27 +1,17 @@
 .aboutContainer {
-  position: relative;
-  display: flex;
-  margin-top: 40vh;
-  justify-content: space-between;
-}
-.text {
-  margin-right: 20px;
+  padding: 10rem;
+  align-items: center;
+  justify-content: center;
+  display: flex; 
+  flex-direction: column; 
 }
 
-.about-title {
-  color: white;
-  margin-top: 15%;
-  text-align: left;
-  z-index: 2;
+.about-title { 
+  text-align: center !important;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+  margin: 1rem;
 }
 
-.about-body {
-  @extend .about-title;
-  align-items: left;
-  margin-top: 0%;
-}
-
-.about-image {
-  width: 70vh;
-  height: 50vh;
-}
+.about-image { align-self: center}
