@@ -59,7 +59,6 @@ function ReactSimplyCarouselExample() {
       <Carousel
         swipeable={true}
         draggable={true}
-        showDots={true}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
@@ -70,7 +69,6 @@ function ReactSimplyCarouselExample() {
         transitionDuration={500}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
-        dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         className="gd-carousel"
       >
