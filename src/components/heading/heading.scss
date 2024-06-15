@@ -5,4 +5,10 @@
   letter-spacing: 5px;
 
   z-index: 2;
+
+  @media (max-width: 768px) { // Adjust breakpoint as needed
+    font-size: 1.3rem; // Adjust font size for smaller screens
+    letter-spacing: 2px; // Adjust letter spacing for smaller screens
+    -webkit-line-clamp: 2; // Allow more lines for text on smaller screens
+  }
 }

@@ -15,12 +15,13 @@ import { Accordion } from "../../components/accordion/Accordion";
 import "./hackathon.scss";
 import { CountdownTimer } from "../../components/countdown/Countdown";
 import Particles from "react-tsparticles";
-import React from "react";
+import React, { ReactNode } from "react";
 import { loadLinksPreset } from "tsparticles-preset-links";
 import type { Engine } from "tsparticles-engine";
 import logo from "../../assets/branding/hackathon.png";
+import ReactSimplyCarouselExample from "../../components/caroussel/ReactSimplyCarousel";
 
-interface IProps {}
+interface IProps { }
 class ParticlesContainer extends React.PureComponent<IProps> {
   async customInit(engine: Engine): Promise<void> {
     await loadLinksPreset(engine);
@@ -87,7 +88,9 @@ const Hackathon = () => {
       "Applications close 11:59 PM EST on March 22nd, 2024.",
     ],
   ];
-  const targetDate = new Date("2024-03-22T23:59:00");
+  const carousselImages: ReactNode[] = [
+
+  ]
   return (
     <div className="outerContainer">
       <div className="backgroundDiv">
@@ -106,28 +109,25 @@ const Hackathon = () => {
                 </BodyText>
               </Col>
             </Row>
-            <Row>
+            <Row className="justify-content-center justify-content-md-start">
               <Button
-                className="mr-2 mb-2"
+              className=""
                 gradientDuoTone="redToYellow"
                 onClick={redirectToIndividual}
-                style={{ margin: "1rem 1rem", width: "14rem" }}
                 disabled={true}
+                style={{ margin: '1rem 1rem', width: '14rem' }}
               >
                 Applications Closed!
               </Button>
             </Row>
             <Row
-              className="justify-content-center"
-              style={{
-                alignItems: "center",
-                textAlign: "center",
-                width: "100%",
-              }}
+              className="justify-content-start"
             >
-              <BodyText className="countdownHeading">
-                Application closed!
-              </BodyText>
+              <Heading className="title" style={{ textAlign: 'center' }}>Thank you for a great hackathon!</Heading>
+              {/* <ControlledCarousel images={[<img src={require("../../assets/images/moviemeet_1.jpg")} alt="Image 1" className="card" />]} /> */}
+              <div style={{ alignItems: 'center' }}>
+                <ReactSimplyCarouselExample />
+              </div>
             </Row>
             <Row xs={1} md={2} lg={2}>
               <Col style={{ margin: "5rem 0rem" }}>
@@ -153,27 +153,10 @@ const Hackathon = () => {
               className="justify-content-center"
               style={{ margin: "5rem 0rem" }}
             >
-              <Heading className="title">Theme</Heading>
-              <BodyText className="bodyText">TBA!</BodyText>
-            </Col>
-            <Col
-              className="justify-content-center"
-              style={{ margin: "5rem 0rem" }}
-            >
               <Heading className="title">Schedule</Heading>
               <BodyText className="bodyText">
                 The hackathon will occur over 2 days from 10:00 A.M. - 9:00 P.M.
                 March 30th and 10 A.M. - 7:00 P.M. March 31st
-              </BodyText>
-            </Col>
-            <Col
-              className="justify-content-center"
-              style={{ margin: "5rem 0rem" }}
-            >
-              <Heading className="title">Sponsor</Heading>
-              <BodyText className="bodyText">
-                If you're interesting in sponsoring this hackathon, please email
-                the Northeastern AI Club at aiclub.neu@gmail.com.
               </BodyText>
             </Col>
             <Heading className="title">FAQ</Heading>

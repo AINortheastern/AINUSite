@@ -1,5 +1,9 @@
 .outerContainer {
-  margin-top: 20vh;
+  @media (width > 576px) {
+    margin-top: 10vh;
+    margin-left: 10vh;
+    margin-right: 10vh; 
+  }
 }
 
 .backgroundDiv {
@@ -12,7 +16,7 @@
 .hackathonInnerContainer {
   padding-right: 15px;
   padding-left: 15px;
-  @media (max-width: 576px) {
+  @media (width: 576px) {
     padding: 5px;
     width: 100%;
   }
@@ -20,14 +24,20 @@
 
 .bodyText {
   font-size: 1.25rem !important;
-  text-align: left;
+  text-align: center; 
   margin-bottom: 0px;
   margin-top: 0px;
   color: #7c9695;
+  @media (width > 576px) {
+    text-align: left;
+  }
 }
 
 .title {
-  text-align: left;
+  text-align: center;
+  @media (width > 576px) {
+    text-align: left;
+  }
   font-size: 3rem !important;
   margin-right: 2rem;
   color: #395453;
@@ -50,4 +60,12 @@
 .countdownHeading {
   text-align: center;
   font-size: 2rem !important;
+}
+
+
+.signupButton { 
+  justify-content: center !important;
+  @media (width < 576px) {
+    
+  }
 }

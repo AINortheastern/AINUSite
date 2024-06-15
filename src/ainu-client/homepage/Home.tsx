@@ -13,7 +13,7 @@ import { Eboard } from "../eboard/Eboard";
 import logo from "../../assets/branding/aineu_header.png";
 import ReactDOM from "react-dom";
 import RainbowButton from "../../components/rainbow-button/button";
-import { Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 const Home = () => {
 
@@ -27,28 +27,28 @@ const Home = () => {
       </div>
       <center>
         <a href="/hackathon">
-          <RainbowButton> 2024 AINU x Babson Hackathon</RainbowButton>
+          <RainbowButton> 2024 AINU x Babson Hackathon Recap</RainbowButton>
         </a>
 
       </center>
 
       <center>
         <FadeInSection>
-          <BodyText style={{ textAlign: 'center', marginTop: '5rem', marginBottom: '2rem' }} className="secondSubheading"> Important Links </BodyText>
-        </FadeInSection>
-        <FadeInSection>
-        <Row xs={1} md={3}>
+          <Col>
+            <BodyText style={{ textAlign: 'center', marginTop: '5rem', marginBottom: '2rem' }} className="secondSubheading"> Important Links </BodyText>
+            <Row xs={1} md={3}>
 
-          <a href="https://forms.gle/sbLvQCE87BVajgm5A" style={{ textDecoration: 'none' }}>
-            <Heading className="gradient1"> Mailing List </Heading>
-          </a>
-          <a href="https://discord.gg/CJFMC6BNyz" style={{ textDecoration: 'none' }}>
-            <Heading className="gradient2"> Discord </Heading>
-          </a>
-          <a href="https://linktr.ee/ainortheastern" style={{ textDecoration: 'none' }}>
-            <Heading className="gradient3"> LinkTree </Heading>
-          </a>
-        </Row>
+              <a href="https://forms.gle/sbLvQCE87BVajgm5A" style={{ textDecoration: 'none' }}>
+                <Heading className="gradient1"> Mailing List </Heading>
+              </a>
+              <a href="https://discord.gg/CJFMC6BNyz" style={{ textDecoration: 'none' }}>
+                <Heading className="gradient2"> Discord </Heading>
+              </a>
+              <a href="https://linktr.ee/ainortheastern" style={{ textDecoration: 'none' }}>
+                <Heading className="gradient3"> LinkTree </Heading>
+              </a>
+            </Row>
+          </Col>
         </FadeInSection>
       </center>
 
@@ -62,6 +62,7 @@ const Home = () => {
       <FadeInSection>
         <Eboard />
       </FadeInSection>
+
     </div>
   );
 };
