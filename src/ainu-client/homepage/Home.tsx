@@ -46,7 +46,6 @@ const Home = () => {
               }}
               className="secondSubheading"
             >
-              {" "}
               Important Links{" "}
             </BodyText>
             <Row xs={1} md={3}>

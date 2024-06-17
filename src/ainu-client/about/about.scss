@@ -24,6 +24,7 @@
     height: auto;
     margin-top: 1rem;
   }
+
   
 }
 
@@ -39,5 +40,12 @@
       font-size: 0.875rem;
       margin-bottom: 0.5rem;
     }
+    margin: 2em 0 2em 0;
+  }
+}
+
+@media (min-width: 768px) { 
+  .about-container { 
+    margin: 10em 0 10em 0; 
   }
 }
