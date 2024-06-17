@@ -24,7 +24,6 @@ function App() {
   };
   return (
     <div className="app">
-  
       <div className="total-container">
         <Router>
           <Routes>
@@ -43,7 +42,9 @@ function App() {
           />
           <Footer.LinkGroup>
             <Footer.Link href="/home">About</Footer.Link>
-            <Footer.Link href="mailto:aiclub.neu@gmail.com">Contact</Footer.Link>
+            <Footer.Link href="mailto:aiclub.neu@gmail.com">
+              Contact
+            </Footer.Link>
           </Footer.LinkGroup>
         </Footer>
       </div>

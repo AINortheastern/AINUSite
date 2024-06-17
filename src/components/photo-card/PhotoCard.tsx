@@ -1,6 +1,6 @@
 // PhotoCard.tsx
-import React, { ReactNode } from 'react';
-import './photocard.scss'; 
+import React, { ReactNode } from "react";
+import "./photocard.scss";
 
 interface PhotoCardProps {
   imageSrc: ReactNode;
@@ -9,13 +9,13 @@ interface PhotoCardProps {
 const PhotoCard: React.FC<PhotoCardProps> = ({ imageSrc }) => {
   return (
     <div className="card">
-      {typeof imageSrc === 'string' ? (
+      {typeof imageSrc === "string" ? (
         <img src={imageSrc} alt="Card Image" />
       ) : (
         imageSrc
       )}
     </div>
   );
-}
+};
 
 export default PhotoCard;

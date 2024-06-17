@@ -1,7 +1,9 @@
 .app {
 }
-html, body {
+html,
+body {
   overflow-x: hidden; /* Disables horizontal scrolling */
+  background: #0d0d0d;
 }
 
 .hamburger-menu {
@@ -54,18 +56,4 @@ html, body {
   margin-right: 1rem;
   color: #395453;
   margin: 0rem 1rem 0rem 0rem;
-}
-
-.total-container {
-  /* width: 100%;
-  margin-top: 10vh;
-  margin-bottom: 40vh;
-  padding-left: 10vh;
-  padding-right: 10vh;
-  position: relative;
-  display: block;
-  @media (max-width: 576px) {
-    margin: 0;
-    padding: 5px;
-  } */
 }

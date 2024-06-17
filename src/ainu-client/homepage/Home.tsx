@@ -16,35 +16,56 @@ import RainbowButton from "../../components/rainbow-button/button";
 import { Col, Row } from "react-bootstrap";
 
 const Home = () => {
-
   return (
     <div className="mainContainer">
-
       <div className="header">
         <img src={logo} alt="AINU Logo" className="logo" />
-        <Heading className="mainSubheading"> Building Tomorrow's Intelligence Today </Heading>
-        <BodyText className="secondSubheading"> Northeastern's premier artificial intelligence student organization.</BodyText>
+        <Heading className="mainSubheading">
+          {" "}
+          Building Tomorrow's Intelligence Today{" "}
+        </Heading>
+        <BodyText className="secondSubheading">
+          {" "}
+          Northeastern's premier artificial intelligence student organization.
+        </BodyText>
       </div>
       <center>
         <a href="/hackathon">
           <RainbowButton> 2024 AINU x Babson Hackathon Recap</RainbowButton>
         </a>
-
       </center>
 
       <center>
         <FadeInSection>
           <Col>
-            <BodyText style={{ textAlign: 'center', marginTop: '5rem', marginBottom: '2rem' }} className="secondSubheading"> Important Links </BodyText>
+            <BodyText
+              style={{
+                textAlign: "center",
+                marginTop: "5rem",
+                marginBottom: "2rem",
+              }}
+              className="secondSubheading"
+            >
+              {" "}
+              Important Links{" "}
+            </BodyText>
             <Row xs={1} md={3}>
-
-              <a href="https://forms.gle/sbLvQCE87BVajgm5A" style={{ textDecoration: 'none' }}>
+              <a
+                href="https://forms.gle/sbLvQCE87BVajgm5A"
+                style={{ textDecoration: "none" }}
+              >
                 <Heading className="gradient1"> Mailing List </Heading>
               </a>
-              <a href="https://discord.gg/CJFMC6BNyz" style={{ textDecoration: 'none' }}>
+              <a
+                href="https://discord.gg/CJFMC6BNyz"
+                style={{ textDecoration: "none" }}
+              >
                 <Heading className="gradient2"> Discord </Heading>
               </a>
-              <a href="https://linktr.ee/ainortheastern" style={{ textDecoration: 'none' }}>
+              <a
+                href="https://linktr.ee/ainortheastern"
+                style={{ textDecoration: "none" }}
+              >
                 <Heading className="gradient3"> LinkTree </Heading>
               </a>
             </Row>
@@ -54,7 +75,6 @@ const Home = () => {
 
       <FadeInSection>
         <About />
-
       </FadeInSection>
       <FadeInSection>
         <Projects />
@@ -62,7 +82,6 @@ const Home = () => {
       <FadeInSection>
         <Eboard />
       </FadeInSection>
-
     </div>
   );
 };

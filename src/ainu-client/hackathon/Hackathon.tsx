@@ -21,7 +21,7 @@ import type { Engine } from "tsparticles-engine";
 import logo from "../../assets/branding/hackathon.png";
 import ReactSimplyCarouselExample from "../../components/caroussel/ReactSimplyCarousel";
 
-interface IProps { }
+interface IProps {}
 class ParticlesContainer extends React.PureComponent<IProps> {
   async customInit(engine: Engine): Promise<void> {
     await loadLinksPreset(engine);
@@ -88,9 +88,7 @@ const Hackathon = () => {
       "Applications close 11:59 PM EST on March 22nd, 2024.",
     ],
   ];
-  const carousselImages: ReactNode[] = [
-
-  ]
+  const carousselImages: ReactNode[] = [];
   return (
     <div className="outerContainer">
       <div className="backgroundDiv">
@@ -111,21 +109,21 @@ const Hackathon = () => {
             </Row>
             <Row className="justify-content-center justify-content-md-start">
               <Button
-              className=""
+                className=""
                 gradientDuoTone="redToYellow"
                 onClick={redirectToIndividual}
                 disabled={true}
-                style={{ margin: '1rem 1rem', width: '14rem' }}
+                style={{ margin: "1rem 1rem", width: "14rem" }}
               >
                 Applications Closed!
               </Button>
             </Row>
-            <Row
-              className="justify-content-start"
-            >
-              <Heading className="title" style={{ textAlign: 'center' }}>Thank you for a great hackathon!</Heading>
+            <Row className="justify-content-start">
+              <Heading className="title" style={{ textAlign: "center" }}>
+                Thank you for a great hackathon!
+              </Heading>
               {/* <ControlledCarousel images={[<img src={require("../../assets/images/moviemeet_1.jpg")} alt="Image 1" className="card" />]} /> */}
-              <div style={{ alignItems: 'center' }}>
+              <div style={{ alignItems: "center" }}>
                 <ReactSimplyCarouselExample />
               </div>
             </Row>
