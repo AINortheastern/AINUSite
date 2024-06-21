@@ -7,6 +7,7 @@ import "./about.scss";
 const About = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
+  // test
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768); // Adjust the breakpoint as needed
