@@ -43,7 +43,7 @@ function App() {
           <Footer.LinkGroup>
             <Footer.Link href="/home">About</Footer.Link>
             <Footer.Link href="mailto:aiclub.neu@gmail.com">
-              Contact
+              Contact Us
             </Footer.Link>
           </Footer.LinkGroup>
         </Footer>
