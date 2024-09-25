@@ -5,6 +5,10 @@ export { default as PlayVideo } from "./home-page/Video";
 export { default as Projects } from "./home-page/Projects";
 export { default as VideoHome } from './home-page/Video';
 
+//events page
+
+export { default as Heroevents } from "./events-page/Hero";
+export { default as Eventscalender } from "./events-page/Calender";
 
 // aboutus page
 export { default as Publicationinsights } from './aboutus-page/Publication';

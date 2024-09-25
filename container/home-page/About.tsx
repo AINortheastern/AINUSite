@@ -4,7 +4,7 @@
 export default function About() {
 
   return (
-    <section className="w-full bg-about padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
+    <section className="w-full bg-about padding-y rounded-t-[20px] z-20 relative mt-[-15px] cursor-[url(/swarmscape),_pointer]">
       <div className="pl-[50px] sm:px-[20px] xm:px-[20px]">
         <h2 className="sub-heading font-medium font-NeueMontreal text-secondry">
           AI Northeastern is committed to&nbsp;

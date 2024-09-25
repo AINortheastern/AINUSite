@@ -14,7 +14,9 @@ import {
   anthonyCampos,
   ashrithaReddyKallem,
   nakulRajpal,
-  swarmscape
+  swarmscape,
+  oliviaZhou,
+  logo,
   
 } from "@/public";
 
@@ -25,6 +27,11 @@ export const navbarItems = [
     id: 1,
     title: "About Us",
     href: "/aboutus",
+  },
+  {
+    id:2,
+    title: "Events",
+    href: "/events",
   }
 ];
 
@@ -57,11 +64,15 @@ export const footernavbarItems = [
   },
   
   {
-    id: 4,
+    id: 2,
     title: "About us",
     href: "aboutus",
   },
-
+  {
+    id: 3,
+    title: "Events",
+    href: "events",
+  },
 ];
 
 
@@ -167,13 +178,13 @@ export const additionalMembers = [
     id: 12,
     name: "Olivia Zhou",
     designation: "Digital Designer",
-    src: swarmscape, // Replace with correct image when available
+    src: oliviaZhou, 
   },
   {
     id: 13,
     name: "Saichandu Juluri",
     designation: "Web Developer",
-    src: saichanduJuluri, // Replace with correct image when available
+    src: saichanduJuluri, 
   },
   {
     id: 14,
@@ -195,3 +206,31 @@ export const additionalMembers = [
   },
 ];
 
+
+// events page
+
+// services page
+
+export const eventsItems = [
+   {
+      id: 1,
+      date: "09/01/2025",
+      name: "AI in Healthcare",
+      url: "/events",
+      category: "AI X Healthcare",
+      src: logo,
+      description: "hackathon",
+      button: "read"
+   },
+   {
+    id: 1,
+    date: "09/01/2025",
+    name: "AI in Healthcare",
+    url: "/events",
+    category: "AI X fashion",
+    src: logo,
+    description: "hackathon",
+    button: "read"
+   }
+  
+];
