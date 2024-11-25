@@ -29,12 +29,13 @@ export default function Hero() {
 										}}
 										className="leading-[130px]">
 										<Image
-											width={120}
-											height={50}
 											src={logo}
 											alt="img"
-											className="w-auto h-[95px] lg:w-auto lg:h-auto md:w-[100px] md:h-[63px] sm:w-[74px] sm:h-[45px] xm:w-[64px] xm:h-[40px] object-cover xl:mt-[15px] mt-[10px] rounded-[10px]"
-										/>
+											className="w-auto max-h-[95px] object-contain rounded-[10px] mt-[10px]
+												md:max-h-[63px]
+												sm:max-h-[45px] 
+												xm:max-h-[40px]"
+											/>
 									</motion.span>
 									<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
 										Intelligence
@@ -45,6 +46,9 @@ export default function Hero() {
 						</div>
 			
 					</div>
+		
+					
+					<EventBanner/>
 					<div className="w-full flex flex-col h-[22vh] border-t border-[#21212155] py-[20px] sm:mb-[80px] xm:mb-[80px] gap-[30px]">
 						<div className="flex justify-between items-center padding-x gap-[20px] sm:flex-col sm:items-start xm:flex-col xm:items-start">
 							<div className="w-[50%] xm:w-full sm:w-full">
@@ -63,7 +67,7 @@ export default function Hero() {
 										<Link
 											className="paragraph font-NeueMontreal text-secondry uppercase group-hover:text-background transition-all  transform duration-[0.3s] ease-[.215,.61,.355,1]"
 											href="/aboutus">
-											About Us
+											Team Members
 										</Link>
 									</div>
 									<div className="w-[33px] flex items-center justify-center h-[33px] border border-[#21212199] rounded-full p-[1px] sm:p-[30px] xm:pb-[30px]  group-hover:bg-secondry transition-all transform duration-[0.3s] ease-[.215,.61,.355,1] cursor-pointer xm:hidden sm:hidden">
@@ -96,3 +100,44 @@ export default function Hero() {
 		</section>
 	);
 }
+
+const EventBanner = () => {
+	return (
+	  <div className="w-full h-[120px] relative mt-[20px]">
+		{/* Background gradient stripe */}
+		<div 
+		  className="absolute inset-0"
+		  style={{
+			background: 'linear-gradient(90deg, rgb(216 203 49), rgb(237, 241, 232))'
+		  }}
+		/>
+  
+		{/* Content */}
+		<div className="relative w-full h-full flex items-center justify-between px-12">
+		<div className="flex items-center space-x-8 h-[17vh]">
+  <div className="relative h-full w-[20vw] flex-shrink-0">
+    <Image
+      src="/InnovaiteLogo.png"
+      alt="Innovaite Logo"
+      fill
+      className="object-contain"
+    />
+  </div>
+  <div className="text-[#394b3f] font-NeueMontreal">
+    <p className="text-lg font-bold">February 15-16, 2025</p>
+    <p className="text-sm">Northeastern University</p>
+  </div>
+</div>
+		  
+		  <Link 
+			href="/innovaite-event-page" 
+			className="bg-[#394b3f] text-white px-6 py-3 rounded-full 
+			  text-sm font-bold font-NeueMontreal
+			  hover:bg-[#d8cb31] color-black transition-all duration-300"
+		  >
+			Register Now
+		  </Link>
+		</div>
+	  </div>
+	);
+  };

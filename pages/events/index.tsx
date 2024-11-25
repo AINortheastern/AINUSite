@@ -15,11 +15,11 @@ export default function Services() {
 	}, []);
 	return (
 		<>
-			<Curve backgroundColor={"#f1f1f1"}>
+			{/* <Curve backgroundColor={"#f1f1f1"}> */}
 				<Heroevents />
 				<Eventscalender />
 	
-			</Curve>
+			{/* </Curve> */}
 		</>
 	);
 }

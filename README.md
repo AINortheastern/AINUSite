@@ -1,3 +1,3 @@
-# NEU AI Website
+# AI NEU Website
 
 

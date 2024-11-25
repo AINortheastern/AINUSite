@@ -18,3 +18,8 @@ export { default as Publicationinsights } from './aboutus-page/Publication';
 export { default as Heroworkiz } from './project-page/Hero';
 
 export { default as Chelenge } from './project-page/Chelenge';
+
+
+// InnovAIte page
+export { default as InnovAIteEvent } from './innovaite-page/InnovaiteEvent';
+export { default as HeroInnovaite } from './innovaite-page/Hero';

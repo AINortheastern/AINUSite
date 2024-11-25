@@ -28,7 +28,7 @@ export default function Navbar() {
 <div className="flex justify-center items-center h-full">
 
   <img 
-    alt="nu ai logo"  
+    alt="ai neu logo"  
     width="60" 
     height="60" 
     data-nimg="1" 
@@ -48,7 +48,7 @@ export default function Navbar() {
 					
 
     <img 
-    alt="nu ai logo" 
+    alt="ai neu logo" 
    
     width="200" 
     height="200" 
