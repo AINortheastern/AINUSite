@@ -46,6 +46,9 @@ export default function Hero() {
 						</div>
 			
 					</div>
+		
+					
+					<EventBanner/>
 					<div className="w-full flex flex-col h-[22vh] border-t border-[#21212155] py-[20px] sm:mb-[80px] xm:mb-[80px] gap-[30px]">
 						<div className="flex justify-between items-center padding-x gap-[20px] sm:flex-col sm:items-start xm:flex-col xm:items-start">
 							<div className="w-[50%] xm:w-full sm:w-full">
@@ -97,3 +100,44 @@ export default function Hero() {
 		</section>
 	);
 }
+
+const EventBanner = () => {
+	return (
+	  <div className="w-full h-[120px] relative mt-[20px]">
+		{/* Background gradient stripe */}
+		<div 
+		  className="absolute inset-0"
+		  style={{
+			background: 'linear-gradient(90deg, rgb(216 203 49), rgb(237, 241, 232))'
+		  }}
+		/>
+  
+		{/* Content */}
+		<div className="relative w-full h-full flex items-center justify-between px-12">
+		<div className="flex items-center space-x-8 h-[17vh]">
+  <div className="relative h-full w-[20vw] flex-shrink-0">
+    <Image
+      src="/InnovaiteLogo.png"
+      alt="Innovaite Logo"
+      fill
+      className="object-contain"
+    />
+  </div>
+  <div className="text-[#394b3f] font-NeueMontreal">
+    <p className="text-lg font-bold">February 15-16, 2024</p>
+    <p className="text-sm">Northeastern University</p>
+  </div>
+</div>
+		  
+		  <Link 
+			href="/innovaite-event-page" 
+			className="bg-[#394b3f] text-white px-6 py-3 rounded-full 
+			  text-sm font-bold font-NeueMontreal
+			  hover:bg-[#d8cb31] color-black transition-all duration-300"
+		  >
+			Register Now
+		  </Link>
+		</div>
+	  </div>
+	);
+  };

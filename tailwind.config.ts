@@ -13,7 +13,7 @@ const config: Config = {
       colors: {
         background: "#f1f1f1",
         secondry: "#212121",
-        marquee: "#ff5400",
+        marquee: "#384b3f",
         about: "#ffbd00"
       },
     },
