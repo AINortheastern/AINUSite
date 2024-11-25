@@ -124,7 +124,7 @@ const EventBanner = () => {
     />
   </div>
   <div className="text-[#394b3f] font-NeueMontreal">
-    <p className="text-lg font-bold">February 15-16, 2024</p>
+    <p className="text-lg font-bold">February 15-16, 2025</p>
     <p className="text-sm">Northeastern University</p>
   </div>
 </div>

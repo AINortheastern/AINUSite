@@ -42,12 +42,12 @@ export const footerItems = [
   {
     id: 1,
     title: "Discord",
-    href: "https://discord.gg/CJFMC6BNyz",
+    href: "https://discord.com/invite/CJFMC6BNyz",
   },
   {
     id: 2,
-    title: "Mailing List",
-    href: "https://forms.gle/sbLvQCE87BVajgm5A",
+    title: "Email",
+    href: "mailto:aiclub.neu@gmail.com",
   },
   {
     id: 3,
@@ -64,6 +64,19 @@ export const footerItems = [
     title: "Linktree",
     href: "https://linktr.ee/ainortheastern",
   },
+
+  {
+    id: 6,
+    title: "Join Our Mailing List",
+    href: "https://forms.gle/sbLvQCE87BVajgm5A",
+  },
+  {
+    id: 7,
+    title: "YouTube",
+    href: "https://www.youtube.com/channel/UCkmHzNA5L3UJZlHSnggu7Eg"
+
+  }
+
 ];
 
 export const footernavbarItems = [

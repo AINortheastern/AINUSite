@@ -1,88 +1,56 @@
 "use client";
-import { footerItems } from "@/constants";
-import Link from "next/link";
-import { 
-  FaDiscord, 
-  FaInstagram, 
-  FaLinkedin, 
-  FaEnvelope, 
-  FaTree 
-} from "react-icons/fa";
+
+import SocialIcons from "@/components/SocialIcons";
 
 export default function About() {
-  const socialIcons:any = {
-    "Discord": FaDiscord,
-    "Mailing List": FaEnvelope,
-    "Instagram": FaInstagram,
-    "LinkedIn": FaLinkedin,
-    "Linktree": FaTree
-  };
   return (
     <section className="w-full bg-about padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
       <div className="pl-[50px] sm:px-[20px] xm:px-[20px]">
         <p className="sub-heading font-medium font-NeueMontreal text-secondry">
-         AI Northeastern is committed to transforming  the landscape of artificial intelligence at Northeastern University, Boston, and beyond by serving as a valuable resource, enhancing knowledge and understanding of AI.
-Our core principles are inclusiveness, interdisciplinarity, responsibility, innovation, and collaboration.
+          AI Northeastern is committed to transforming the landscape of
+          artificial intelligence at Northeastern University, Boston, and beyond
+          by serving as a valuable resource, enhancing knowledge and
+          understanding of AI. Our core principles are inclusiveness,
+          interdisciplinarity, responsibility, innovation, and collaboration.
         </p>
       </div>
-	  <div className="w-full border-y border-[#21212155] my-[50px] py-[20px]">
-
-  <div className="padding-x pb-[50px] w-full flex sm:flex-col xm:flex-col gap-[30px] justify-between">
-    <div className="w-[50%] sm:w-full xm:w-full">
-      <h1 className="sub-heading font-medium text-secondry font-NeueMontreal mb-2 text-white">
-        What you can expect?
-      </h1>
-      <div className="w sm:w-[60%] xm:w-[60%]">
-          <p className="sub-paragraph font-medium font-NeueMontreal text-secondry tracking-wide">
-            AI NEU hosts a weekly reading group to discuss papers in AI,
-            bringing together students and experts to deepen their understanding. 
-            Additionally, we organize hackathons to foster innovation and skill-building, 
-            and feature guest speakers who are leaders in the field of AI.
-          </p>
-          <p className="sub-paragraph font-medium font-NeueMontreal text-secondry pt-[30px] tracking-wide">
-            With a focus on collaboration and responsibility, AI NEU empowers the next generation 
-            of AI practitioners, driving innovation and growth in the AI community.
-          </p>
-          
+      <div className="w-full border-y border-[#21212155] my-[50px] py-[20px]">
+        <div className="padding-x pb-[50px] w-full flex sm:flex-col xm:flex-col gap-[30px] justify-between">
+          <div className="w-[50%] sm:w-full xm:w-full">
+            <h1 className="sub-heading font-medium text-secondry font-NeueMontreal mb-2 text-white">
+              What you can expect?
+            </h1>
+            <div className="w sm:w-[60%] xm:w-[60%]">
+              <p className="sub-paragraph font-medium font-NeueMontreal text-secondry tracking-wide">
+                AI NEU hosts a weekly reading group to discuss papers in AI,
+                bringing together students and experts to deepen their
+                understanding. Additionally, we organize hackathons to foster
+                innovation and skill-building, and feature guest speakers who
+                are leaders in the field of AI.
+              </p>
+              <p className="sub-paragraph font-medium font-NeueMontreal text-secondry pt-[30px] tracking-wide">
+                With a focus on collaboration and responsibility, AI NEU
+                empowers the next generation of AI practitioners, driving
+                innovation and growth in the AI community.
+              </p>
+            </div>
+          </div>
+          <div className="w-[50%] sm:w-full xm:w-full">
+            <div className="w-full flex flex-col items-center justify-center h-full space-y-4 text-center">
+              <blockquote className="text-2xl sm:text-3xl md:text-4xl font-bold font-NeueMontreal text-white max-w-2xl ">
+                "Artificial intelligence, deep learning, machine learning —
+                whatever you're doing if you don't understand it — learn it.
+                Because otherwise, you're going to be a dinosaur within three
+                years."
+              </blockquote>
+              <p className="text-base font-light font-NeueMontreal text-white tracking-wide">
+                — Mark Cuban
+              </p>
+            </div>
+          </div>
         </div>
-	  
-    </div>
-    <div className="w-[50%] sm:w-full xm:w-full">
-    <div className="w-full flex flex-col items-center justify-center h-full space-y-4 text-center">
-
-  <blockquote className="text-2xl sm:text-3xl md:text-4xl font-bold font-NeueMontreal text-white max-w-2xl ">
-    "Artificial intelligence, deep learning, machine learning — whatever you're doing 
-    if you don't understand it — learn it. Because otherwise, you're going to be a dinosaur within three years."
-  </blockquote>
-  <p className="text-base font-light font-NeueMontreal text-white tracking-wide">
-    — Mark Cuban
-  </p>
-</div>
-    </div>
-  </div>
-</div>
-<div className="w-full flex justify-center items-center space-x-2 sm:space-x-4 px-4 sm:px-8 py-4">
-      {footerItems.map((item) => {
-        const IconComponent = socialIcons[item.title];
-        return (
-          <Link 
-            key={item.id} 
-            href={item.href} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center justify-center 
-              text-black font-bold text-sm sm:text-base 
-              hover:text-gray-700 
-              transition-colors duration-300 
-              p-2 rounded-full 
-              hover:bg-gray-100"
-          >
-            {IconComponent && <IconComponent size={24} className="mr-2" />}
-            <span className="hidden sm:inline">{item.title}</span>
-          </Link>
-        );
-      })}
-    </div>
+      </div>
+      <SocialIcons />
 
       {/* <div className="w-full flex justify-between padding-x sm:flex-col xm:flex-col gap-[30px]">
         <div className="flex flex-col gap-[30px]">
