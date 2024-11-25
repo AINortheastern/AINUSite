@@ -1,3 +1,9 @@
+/**
+ * 
+ * DO NOT REMOVE COMMENTED CODE BELOW. IT IS USED FOR FUTURE IMPLEMENTATION OF CALENDAR COMPONENT 
+ * 
+ */
+
 // import Image from "next/image";
 // import { useState } from "react";
 // import { eventsItems } from "@/constants";
