@@ -29,12 +29,13 @@ export default function Hero() {
 										}}
 										className="leading-[130px]">
 										<Image
-											width={120}
-											height={50}
 											src={logo}
 											alt="img"
-											className="w-auto h-[95px] lg:w-auto lg:h-auto md:w-[100px] md:h-[63px] sm:w-[74px] sm:h-[45px] xm:w-[64px] xm:h-[40px] object-cover xl:mt-[15px] mt-[10px] rounded-[10px]"
-										/>
+											className="w-auto max-h-[95px] object-contain rounded-[10px] mt-[10px]
+												md:max-h-[63px]
+												sm:max-h-[45px] 
+												xm:max-h-[40px]"
+											/>
 									</motion.span>
 									<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
 										Intelligence
@@ -63,7 +64,7 @@ export default function Hero() {
 										<Link
 											className="paragraph font-NeueMontreal text-secondry uppercase group-hover:text-background transition-all  transform duration-[0.3s] ease-[.215,.61,.355,1]"
 											href="/aboutus">
-											About Us
+											Team Members
 										</Link>
 									</div>
 									<div className="w-[33px] flex items-center justify-center h-[33px] border border-[#21212199] rounded-full p-[1px] sm:p-[30px] xm:pb-[30px]  group-hover:bg-secondry transition-all transform duration-[0.3s] ease-[.215,.61,.355,1] cursor-pointer xm:hidden sm:hidden">

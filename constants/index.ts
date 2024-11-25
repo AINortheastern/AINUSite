@@ -17,6 +17,7 @@ import {
   swarmscape,
   oliviaZhou,
   logo,
+  matthewGarcia,
   
 } from "@/public";
 
@@ -25,7 +26,7 @@ export const navbarItems = [
   
   {
     id: 1,
-    title: "About Us",
+    title: "Team Members",
     href: "/aboutus",
   },
   {
@@ -48,9 +49,18 @@ export const footerItems = [
     title: "Mailing List",
     href: "https://forms.gle/sbLvQCE87BVajgm5A",
   },
-
+  {
+    id: 3,
+    title: "Instagram",
+    href: "https://www.instagram.com/ainortheastern/",
+  },
   {
     id: 4,
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/company/ai-nu",
+  },
+  {
+    id: 5,
     title: "Linktree",
     href: "https://linktr.ee/ainortheastern",
   },
@@ -65,7 +75,7 @@ export const footernavbarItems = [
   
   {
     id: 2,
-    title: "About us",
+    title: "Team Members",
     href: "aboutus",
   },
   {
@@ -202,7 +212,13 @@ export const additionalMembers = [
     id: 16,
     name: "Ashritha Reddy Kallem",
     designation: "Outreach Associate",
-    src: ashrithaReddyKallem, // Replace with correct image when available
+    src: ashrithaReddyKallem, 
+  },
+  {
+    id: 17,
+    name: "Matthew Garcia",
+    designation: "Reading Group Lead",
+    src: matthewGarcia, 
   },
 ];
 

@@ -20,13 +20,14 @@ export default function Hero() {
 											delay: 1.5,
 										}}
 										className="leading-[130px]">
-										<Image
-											width={120}
-											height={50}
+											<Image
 											src={logo}
 											alt="img"
-											className="w-auto h-[95px] lg:w-auto lg:h-auto md:w-[100px] md:h-[63px] sm:w-[74px] sm:h-[45px] xm:w-[64px] xm:h-[40px] object-cover xl:mt-[15px] mt-[10px] rounded-[10px]"
-										/>
+											className="w-auto max-h-[95px] object-contain rounded-[10px] mt-[10px]
+												md:max-h-[63px]
+												sm:max-h-[45px] 
+												xm:max-h-[40px]"
+											/>
 									</motion.span>
 									<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
 										Swarmscape

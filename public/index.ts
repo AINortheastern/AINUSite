@@ -27,5 +27,6 @@ export { default as saichanduJuluri } from './SaichanduJuluri.jpg';
 export { default as ashrithaReddyKallem } from './AshrithaReddyKallem.jpeg';
 export { default as nakulRajpal } from './NakulRajpal.webp';
 export { default as oliviaZhou } from './OliviaZhou.webp';
+export { default as matthewGarcia } from './MatthewGarcia.png';
 
 export { default as swarmscape } from './swarmscape.jpg';
