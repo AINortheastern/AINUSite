@@ -119,3 +119,7 @@ body {
 .h {
 	height: calc(100vh + 600px);
 }
+
+.bg-about {
+	background-color: #F1C347;
+}

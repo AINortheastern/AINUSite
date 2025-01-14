@@ -22,14 +22,14 @@ export default function About() {
             </h1>
             <div className="w sm:w-[60%] xm:w-[60%]">
               <p className="sub-paragraph font-medium font-NeueMontreal text-secondry tracking-wide">
-                AI NEU hosts a weekly reading group to discuss papers in AI,
+                AI NU hosts a weekly reading group to discuss papers in AI,
                 bringing together students and experts to deepen their
                 understanding. Additionally, we organize hackathons to foster
                 innovation and skill-building, and feature guest speakers who
                 are leaders in the field of AI.
               </p>
               <p className="sub-paragraph font-medium font-NeueMontreal text-secondry pt-[30px] tracking-wide">
-                With a focus on collaboration and responsibility, AI NEU
+                With a focus on collaboration and responsibility, AI NU
                 empowers the next generation of AI practitioners, driving
                 innovation and growth in the AI community.
               </p>
