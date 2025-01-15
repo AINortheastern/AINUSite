@@ -19,14 +19,19 @@
 		],
 		"paths": {
 			"@/*": ["./*"]
-		}
+		},
+		"typeRoots": [
+			"./node_modules/@types",
+			"./types"
+		]
 	},
 	"include": [
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"components/Curve/Curve.jsx"
+		"components/Curve/Curve.jsx",
+		"types/**/*.d.ts"
 	],
 	"exclude": ["node_modules"]
 }

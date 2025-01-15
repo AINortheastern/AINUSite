@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { eyes } from "@/public";
+// import { eyes } from "@/public";
 import React, { useEffect, useState } from "react";
 
 export default function Eyes({ className }: { className: string }) {
@@ -27,8 +27,10 @@ export default function Eyes({ className }: { className: string }) {
 					style={{
 						transform: `rotate(${rotate}deg)`,
 					}}
-					src={eyes}
-					alt="img"
+					src="/eyes.svg"
+					alt="eyes"
+					width={100}
+					height={100}
 					className="w-full h-full object-cover"
 				/>
 			</div>
@@ -39,8 +41,10 @@ export default function Eyes({ className }: { className: string }) {
 					style={{
 						transform: `rotate(${rotate}deg)`,
 					}}
-					src={eyes}
-					alt="img"
+					src="/eyes.svg"
+					alt="eyes"
+					width={100}
+					height={100}
 					className="w-full h-full object-cover"
 				/>
 			</div>

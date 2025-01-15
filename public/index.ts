@@ -1,4 +1,4 @@
-export { default as eyes } from "./eyes.svg";
+// export { default as eyes } from "./eyes.svg";
 export { default as logo } from "./logo.png";
 export { default as eyeplay } from "./eyeplay.svg";
 

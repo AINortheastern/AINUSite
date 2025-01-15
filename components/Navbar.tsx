@@ -6,6 +6,7 @@ import { navbarItems } from "@/constants";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import MobileNav from "./MobileNav";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function Navbar() {
 	const [hidden, setHidden] = useState(false);
@@ -30,7 +31,13 @@ export default function Navbar() {
 				animate={hidden ? "hidden" : "vissible"}
 			>
 				<div className="flex justify-center items-center h-full">
-					<img alt="ai neu logo" width="60" height="60" data-nimg="1" src="/logo.png" />
+					<Image 
+						src="/logo.png"
+						alt="ai neu logo" 
+						width={60} 
+						height={60}
+						priority
+					/>
 					<motion.span
 						initial={{ width: 0 }}
 						animate={{ width: "auto" }}
@@ -44,12 +51,12 @@ export default function Navbar() {
 							className="small-text font-NeueMontreal text-secondry uppercase group-hover:text-background transition-all duration-300 ease-in-out"
 							href={"/"}
 						>
-							<img
-								alt="ai neu logo"
-								width="200"
-								height="200"
-								data-nimg="1"
+							<Image
 								src="/ai-neu-text.png"
+								alt="ai neu logo"
+								width={200}
+								height={200}
+								priority
 							/>
 						</Link>
 					</motion.span>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { eyes } from "@/public";
+// import { eyes } from "@/public";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 
@@ -59,14 +59,14 @@ export default function PlayVideo({ videosrc }: { videosrc: string }) {
 						onClick={togglePlay}
 					>
 						<div className="relative w-full h-full">
-							<Image
+							{/* <Image
 								style={{
 									transform: `rotate(${rotate}deg)`,
 								}}
 								src={eyes}
 								alt="img"
 								className="w-full h-full object-cover"
-							/>
+							/> */}
 							<p className="absolute top-1/2 left-1/2 paragraph uppercase text-white font-NeueMontreal font-medium transform translate-x-[-50%] translate-y-[-50%]">
 								{isPlaying ? "Pause" : "Play"}
 							</p>
