@@ -9,8 +9,8 @@ export { default as charlesCiampa } from "./CharlesCiampa.jpg";
 export { default as aditiRathi } from "./AditiRathi.jpeg";
 export { default as nickVoyzey } from "./NickVoyzey.jpeg";
 export { default as janakMunshi } from "./JanakMunshi.png";
-// export { default as kerissaDuliga } from "./KerissaDuliga.jpg";
-// export { default as aaravGambhir } from "./AaravGambhir.jpg";
+export { default as kerissaDuliga } from "./KerissaDuliga.jpg";
+export { default as aaravGambhir } from "./AaravGambhir.jpg";
 export { default as anthonyCampos } from "./AnthonyCampos.jpeg";
 
 // team members page assets
