@@ -18,6 +18,9 @@ import {
   oliviaZhou,
   logo,
   matthewGarcia,
+  muskanBhatt,
+  jasonBalayev,
+  averyDarlington,
   
 } from "@/public";
 
@@ -33,6 +36,11 @@ export const navbarItems = [
     id:2,
     title: "Events",
     href: "/events",
+  },
+  {
+    id:3,
+    title: "InnovAIte",
+    href: "/innovaite-event-page",
   }
 ];
 
@@ -95,6 +103,11 @@ export const footernavbarItems = [
     id: 3,
     title: "Events",
     href: "events",
+  },
+  {
+    id: 4,
+    title: "InnovAIte",
+    href: "innovaite-event-page",
   },
 ];
 
@@ -185,12 +198,12 @@ export const coreMemberes = [
 
 // Additional Members
 export const additionalMembers = [
-  {
-    id: 10,
-    name: "Mihalis Koutouvos",
-    designation: "Content Creator",
-    src: mihalisKoutouvos,
-  },
+  // {
+  //   id: 10,
+  //   name: "Mihalis Koutouvos",
+  //   designation: "Content Creator",
+  //   src: mihalisKoutouvos,
+  // },
   {
     id: 11,
     name: "Julie Kim",
@@ -203,36 +216,54 @@ export const additionalMembers = [
     designation: "Digital Designer",
     src: oliviaZhou, 
   },
-  {
-    id: 13,
-    name: "Saichandu Juluri",
-    designation: "Web Developer",
-    src: saichanduJuluri, 
-  },
+  // {
+  //   id: 13,
+  //   name: "Saichandu Juluri",
+  //   designation: "Web Developer",
+  //   src: saichanduJuluri, 
+  // },
   {
     id: 14,
     name: "Naomi Wiley",
-    designation: "Reading Group Content Creator",
+    designation: "Forum content creator",
     src: naomiWiley,
   },
+  // {
+  //   id: 15,
+  //   name: "Dhruv Reddy Tekulapalli",
+  //   designation: "Project Lead",
+  //   src: dhruvReddy,
+  // },
+  // {
+  //   id: 16,
+  //   name: "Ashritha Reddy Kallem",
+  //   designation: "Outreach Associate",
+  //   src: ashrithaReddyKallem, 
+  // },
+  // {
+  //   id: 17,
+  //   name: "Matthew Garcia",
+  //   designation: "Reading Group Lead",
+  //   src: matthewGarcia, 
+  // },
   {
-    id: 15,
-    name: "Dhruv Reddy Tekulapalli",
-    designation: "Project Lead",
-    src: dhruvReddy,
+    id: 18,
+    name: "Muskan Bhatt",
+    designation: "Sponsorship Assoc.",
+    src: muskanBhatt, 
   },
   {
-    id: 16,
-    name: "Ashritha Reddy Kallem",
-    designation: "Outreach Associate",
-    src: ashrithaReddyKallem, 
+    id: 19, 
+    name: "Jason Balayev",
+    designation: "Web Developer",
+    src: jasonBalayev,
   },
   {
-    id: 17,
-    name: "Matthew Garcia",
-    designation: "Reading Group Lead",
-    src: matthewGarcia, 
-  },
+    id: 20, 
+    name: "Avery Darlington",
+    designation: "Content Creator",
+    src: averyDarlington,
+  }
 ];
 
 

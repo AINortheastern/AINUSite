@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Marquee } from "@/components";
 import {
   FaMapMarkerAlt,
   FaCalendarAlt,
@@ -22,13 +23,41 @@ const eventImages = [
 
 const InnovAIteEvent = () => {
   return (
-    <section className="w-full padding-y rounded-t-[20px] z-20 relative mt-[-15px]">
-      {/* Event Introduction */}
+    <section className="w-full bg-background">
+      {/* Logo and Register Button Section */}
+      <div className="w-full min-h-[60vh] flex items-center">
+        <div className="w-full flex items-center justify-between px-12">
+          {/* Logo Container - 70% */}
+          <div className="w-[70%] flex justify-center items-center">
+            <Image
+              width={800}
+              height={800}
+              src={"/InnovaiteLogo.png"}
+              alt="Innovaite Logo"
+              className="w-[80%] object-contain transition-all duration-300"
+              priority
+            />
+          </div>
+
+          {/* Button Container - 30% */}
+          <div className="w-[30%] flex justify-center items-center">
+            <Link 
+              href="https://docs.google.com/forms/d/e/1FAIpQLScdHp933j3lFSI_sqtj5tsmaPAUz4W_kOL26UPIKPzKb5hc-w/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#394b3f] text-white px-14 py-7 rounded-[30px] text-3xl font-bold font-NeueMontreal 
+                hover:bg-[#a5babf] transition-all duration-300 shadow-xl hover:shadow-2xl 
+                transform hover:scale-105 active:scale-95"
+            >
+              Register Now
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Rest of your existing content */}
       <div className="pl-[50px] sm:px-[20px] xm:px-[20px]">
-        {/* <h1 className="text-4xl font-bold font-NeueMontreal mb-4">
-          InnovAIte Hackathon
-        </h1> */}
-        <p className="sub-heading font-medium font-NeueMontreal text-secondry">
+        <p className="sub-heading font-medium font-NeueMontreal text-black">
           InnovAIte Hackathon is a 30-hour intensive project development event
           bringing together innovative students to solve real-world challenges
           through AI.
@@ -144,41 +173,27 @@ const InnovAIteEvent = () => {
       <FAQ />
       {/* FAQ Section */}
 
-      {/* Registration Button */}
-      <div className="w-full flex justify-center mt-12">
-        <Link
-          href="#"
-          className="bg-white text-black px-8 py-4 rounded-full text-xl font-bold hover:bg-gray-200 transition"
-        >
-          Register Now
-        </Link>
-      </div>
-
       {/* <Organizers /> */}
 
       {/*Sponsors Callout*/}
       <section className="w-full mt-12 px-12 flex flex-col items-center">
-  {/* Centered Heading */}
-  <h2 className="text-3xl font-bold font-NeueMontreal text-[#394b3f] mb-6 text-center">
-    Contact us for Sponsoring
-  </h2>
+        {/* Centered Heading */}
+        <h2 className="text-3xl font-bold font-NeueMontreal text-[#394b3f] mb-6 text-center">
+          Contact us for Sponsoring
+        </h2>
 
-  {/* Large Button */}
-  <button
-    className="p-6 w-full md:w-auto text-xl font-bold font-NeueMontreal text-white bg-[#f1c347] hover:bg-[#dba339] rounded-lg shadow-lg transition-all duration-300 text-center"
-    onClick={() => window.open("mailto:aiclub.neu@gmail.com")}
-    style={{ maxWidth: "400px" }} // Optional width limit for large screens
-  >
-    aiclub.neu@gmail.com
-  </button>
-</section>
-
-
+        {/* Large Button */}
+        <button
+          className="p-6 w-full md:w-auto text-xl font-bold font-NeueMontreal text-white bg-[#f1c347] hover:bg-[#dba339] rounded-lg shadow-lg transition-all duration-300 text-center"
+          onClick={() => window.open("mailto:aiclub.neu@gmail.com")}
+          style={{ maxWidth: "400px" }} // Optional width limit for large screens
+        >
+          aiclub.neu@gmail.com
+        </button>
+      </section>
 
       {/* Contact Us */}
-
-        <SocialIcons />
-
+      <SocialIcons />
     </section>
   );
 };
@@ -298,7 +313,6 @@ const FAQ = () => {
               key={item.id}
               className={`w-full flex py-[10px] flex-col border-b border-[#394b3f55]`}
             >
-              {/* Same content structure as left column */}
               <div className="w-full flex items-center justify-between py-[10px]">
                 <div className="w-[90%]">
                   <h3 className="paragraph font-normal font-NeueMontreal text-secondry">
@@ -345,45 +359,6 @@ const FAQ = () => {
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-};
-
-const Organizers = () => {
-  const organizers = [
-    {
-      id: 1,
-      role: "Lead Organizer",
-      name: "AI Northeastern",
-    },
-    {
-      id: 2,
-      role: "Co-organizer",
-      name: "AI NEU",
-    },
-  ];
-
-  return (
-    <section className="w-full mt-12 px-12">
-      <h2 className="text-3xl font-bold font-NeueMontreal text-[#394b3f] mb-6">
-        Event Organizers
-      </h2>
-      <div className="grid grid-cols-2 gap-6">
-        {organizers.map((org) => (
-          <div
-            key={org.id}
-            className=" p-8 flex flex-col justify-center items-center"
-            style={{ backgroundColor: "rgba(165, 186, 191, 0.2)" }}
-          >
-            <h3 className="text-xl font-bold font-NeueMontreal text-[#394b3f] mb-2">
-              {org.role}
-            </h3>
-            <p className="text-lg font-medium font-NeueMontreal text-[#394b3f] text-center">
-              {org.name}
-            </p>
-          </div>
-        ))}
       </div>
     </section>
   );

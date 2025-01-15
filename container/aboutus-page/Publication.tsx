@@ -63,30 +63,31 @@ export default function Publication() {
 		{/* </section> */}
 		
 		<div className="w-full padding-x py-[30px]">
-	<div className="w-full flex justify-between gap-[20px] flex-wrap">
-		{coreMemberes.map((item) => (
-			<div
-				className="w-[calc(25%-20px)] flex gap-[10px] items-center flex-col"
-				key={item.id}>
-				<div className="group overflow-hidden rounded-[20px]">
-					<Image
-						src={item.src}
-						alt="img"
-						className="w-full h-full group-hover:scale-[1.09] transform duration-[1s] ease-[.4,0,.2,1]"
-					/>
-				</div>
-				<div className="w-full text-center">
-					<h4 className="paragraph font-light text-light-black text-[20px] font-NeueMontreal mb-[2px]">
-						{item.name}  
-					</h4>
-					<h4 className="paragraph font-bold text-light-black text-[16px] font-NeueMontreal mt-[0px]">
-						{item.designation}  
-					</h4>
-				</div>
+			<div className="grid grid-cols-4 gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+				{coreMemberes.map((item) => (
+					<div
+						key={item.id}
+						className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
+					>
+						<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md bg-white">
+							<Image
+								src={item.src}
+								alt={`${item.name}'s photo`}
+								className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+							/>
+						</div>
+						<div className="w-full text-center mt-4 space-y-1">
+							<h4 className="text-xl font-light text-gray-800 font-NeueMontreal">
+								{item.name}
+							</h4>
+							<p className="text-sm font-bold text-[#394b3f] font-NeueMontreal">
+								{item.designation}
+							</p>
+						</div>
+					</div>
+				))}
 			</div>
-		))}
-	</div>
-</div>
+		</div>
 
 
 {/**team members */}
@@ -107,30 +108,31 @@ export default function Publication() {
 		{/* </section> */}
 		
 		<div className="w-full padding-x py-[30px]">
-	<div className="w-full flex justify-between gap-[20px] flex-wrap">
-		{additionalMembers.map((item) => (
-			<div
-				className="w-[calc(25%-20px)] flex gap-[10px] items-center flex-col"
-				key={item.id}>
-				<div className="group overflow-hidden rounded-[20px]">
-					<Image
-						src={item.src}
-						alt="img"
-						className="w-full h-full group-hover:scale-[1.09] transform duration-[1s] ease-[.4,0,.2,1]"
-					/>
-				</div>
-				<div className="w-full text-center">
-					<h4 className="paragraph font-light text-light-black text-[20px] font-NeueMontreal mb-[2px]">
-						{item.name}  
-					</h4>
-					<h4 className="paragraph font-bold text-light-black text-[16px] font-NeueMontreal mt-[0px]">
-						{item.designation}  
-					</h4>
-				</div>
+			<div className="grid grid-cols-4 gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+				{additionalMembers.map((item) => (
+					<div
+						key={item.id}
+						className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
+					>
+						<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md">
+							<Image
+								src={item.src}
+								alt={`${item.name}'s photo`}
+								className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+							/>
+						</div>
+						<div className="w-full text-center mt-4 space-y-1">
+							<h4 className="text-xl font-light text-gray-800 font-NeueMontreal">
+								{item.name}
+							</h4>
+							<p className="text-sm font-bold text-gray-600 font-NeueMontreal">
+								{item.designation}
+							</p>
+						</div>
+					</div>
+				))}
 			</div>
-		))}
-	</div>
-</div>
+		</div>
 
 		</>
 	);

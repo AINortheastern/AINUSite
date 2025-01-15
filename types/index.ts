@@ -1,6 +1,7 @@
 export type TtextHoverProps = {
    titile1: string;
    titile2: string;
+   isHomePage?: boolean;
 };
 
 export type TlogoMarqueeProps = {

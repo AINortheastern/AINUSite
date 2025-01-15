@@ -20,7 +20,7 @@ export default function App({
 					{...pageProps}
 				/>
 			</AnimatePresence>
-			<Footer />
+			<Footer/>
 		</>
 	);
 }

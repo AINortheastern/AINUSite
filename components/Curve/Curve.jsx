@@ -8,6 +8,8 @@ const routes = {
 	"/": "Home",
 	
 	"/aboutus": "Team Members",
+	"/events": "Events",
+	"/innovaite-event-page": "InnovAIte",
 	"/project": "Project",
 };
 

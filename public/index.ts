@@ -17,7 +17,7 @@ export { default as anthonyCampos } from './AnthonyCampos.jpeg';
 
 // team members page assets
 export { default as mihalisKoutouvos } from './MihalisKoutouvos.png';
-export { default as julieKim } from './JulieKim.jpg';
+export { default as julieKim } from './JulieKim2.png';
 export { default as dhruvReddy } from './DhruvReddy.jpg';
 export { default as naomiWiley } from './NaomiWiley.jpg';
 export { default as arnavNarain } from './ArnavNarain.jpg';
@@ -26,7 +26,11 @@ export { default as brandonButler } from './BrandonButler.jpg';
 export { default as saichanduJuluri } from './SaichanduJuluri.jpg';
 export { default as ashrithaReddyKallem } from './AshrithaReddyKallem.jpeg';
 export { default as nakulRajpal } from './NakulRajpal.webp';
-export { default as oliviaZhou } from './OliviaZhou.webp';
+export { default as oliviaZhou } from './OliviaZhou2.png';
 export { default as matthewGarcia } from './MatthewGarcia.png';
+export { default as muskanBhatt } from './MuskanBhatt.png';
+export { default as jasonBalayev } from './JasonAI.jpg';
+export { default as averyDarlington } from './AveryDarlington.png';
+
 
 export { default as swarmscape } from './swarmscape.jpg';

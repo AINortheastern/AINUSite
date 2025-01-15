@@ -14,7 +14,7 @@ export default function Innovaite() {
 	return (
 		<>
 			<Curve backgroundColor={"#f1f1f1"}>
-        <HeroInnovaite/>
+        		<HeroInnovaite/>
 				<InnovAIteEvent />
 			</Curve>
 		</>

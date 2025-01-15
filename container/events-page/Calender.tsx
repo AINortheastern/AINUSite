@@ -4,151 +4,208 @@
  * 
  */
 
-// import Image from "next/image";
-// import { useState } from "react";
-// import { eventsItems } from "@/constants";
-// import { AnimatePresence, motion } from "framer-motion";
-// import { RoundButton } from "@/components";
 
+/**
+ * Chandus Calendar Implementation (Revamp)
+ */
+import { motion } from "framer-motion";
 
-// interface Event {
-// 	title: string;
-// 	date: string;
-// 	time: string;
-// 	location: string;
-// 	description: string;
-// 	image?: string;
-//   }
-  
-//   const Calendar = () => {
-// 	const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
-  
-// 	const events = {
-// 	  "WEDNESDAY 15. FEBRUARY": [
-// 		{
-// 		  title: "Collegium Hungaricum Berlin",
-// 		  date: "15 February 2023",
-// 		  time: "18:00",
-// 		  location: "Berlin",
-// 		  description: "Details about Collegium Hungaricum Berlin",
-// 		  image: "#"
-// 		}
-// 	  ],
-// 	  "THURSDAY 23. FEBRUARY": [
-// 		{
-// 		  title: "Thomas Höpker",
-// 		  time: "19-22 h",
-// 		  location: "f3 - freiraum für fotografie",
-// 		  description: "Opening / Vernissage",
-// 		  image: "#",
-// 		  date: "23 February 2023"
-
-// 		},
-// 		{
-// 		  title: "Anett Stuth",
-// 		  time: "19-22 h",
-// 		  location: "Künstlerhaus Bethanien",
-// 		  description: "In her new works with the overarching title TIME LOOPS, Anett Stuth photographs, collages and decollages natural artifacts, plant and animal objects and remains from the recent and prehistoric past.",
-// 		  image: "#",
-// 		  date: "23 February 2023"
-// 		}
-// 	  ]
-// 	};
-  
-// 	return (
-// 	  <div className="flex flex-row w-full min-h-screen bg-white">
-// 		{/* Left Event Details Panel */}
-// 		<div className="w-1/3 border-r border-[#21212155] p-8">
-// 		  {selectedEvent ? (
-// 			<div className="space-y-8">
-// 			  {selectedEvent.image && (
-// 				<div className="aspect-[4/3] relative overflow-hidden">
-// 				  <img
-// 					src={selectedEvent.image}
-// 					alt={selectedEvent.title}
-// 					className="w-full h-full object-cover"
-// 				  />
-// 				</div>
-// 			  )}
-// 			  <div className="space-y-6">
-// 				<h2 className="text-2xl uppercase">
-// 				  Opening / Vernissage
-// 				</h2>
-// 				<div className="space-y-1">
-// 				  <p className="uppercase text-lg">
-// 					{selectedEvent.date}
-// 				  </p>
-// 				  <p className="uppercase text-lg">
-// 					{selectedEvent.time}:
-// 				  </p>
-// 				  <p className="uppercase text-lg">
-// 					{selectedEvent.location}
-// 				  </p>
-// 				  <p className="uppercase text-lg">
-// 					{selectedEvent.title}
-// 				  </p>
-// 				</div>
-// 				<p className="text-base leading-relaxed">
-// 				  {selectedEvent.description}
-// 				</p>
-// 				<button className="w-full bg-black text-white py-3 uppercase text-sm">
-// 				  To the event
-// 				</button>
-// 			  </div>
-// 			</div>
-// 		  ) : (
-// 			<div className="h-full flex items-center justify-center">
-// 			  <p className="text-gray-500">Select an event to view details</p>
-// 			</div>
-// 		  )}
-// 		</div>
-  
-// 		{/* Right Calendar List */}
-// 		<div className="w-2/3 p-8">
-// 		  <div className="flex justify-end mb-8">
-// 			<button className="text-gray-600 uppercase flex items-center gap-2">
-// 			  Filter ↓
-// 			</button>
-// 		  </div>
-  
-// 		  {Object.entries(events).map(([date, dateEvents]) => (
-// 			<div key={date} className="mb-8">
-// 			  <div className="border-y border-black py-3">
-// 				<h3 className="text-base font-normal">{date}</h3>
-// 			  </div>
-			  
-// 			  {dateEvents.map((event, index) => (
-// 				<div 
-// 				  key={index}
-// 				  onClick={() => setSelectedEvent(event)}
-// 				  className="border-b border-[#21212155] last:border-b-0 cursor-pointer hover:bg-gray-50 transition-colors"
-// 				>
-// 				  <div className="grid grid-cols-[120px_1fr] gap-8 py-4">
-// 					<div className="text-sm">
-// 					  {event.time}
-// 					</div>
-// 					<div className="space-y-1">
-// 					  {/* <div className="text-sm">Opening / Vernissage</div> */}
-// 					  <div className="text-sm font-medium">{event.title}</div>
-// 					  <div className="text-sm text-gray-600">{event.location}</div>
-// 					</div>
-// 				  </div>
-// 				</div>
-// 			  ))}
-// 			</div>
-// 		  ))}
-// 		</div>
-// 	  </div>
-// 	);
-//   };
-  
-//   export default Calendar;
-
-
-export default function Calender() {
-	return (
-		<div>
-			<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&mode=AGENDA&src=YWljbHViLm5ldUBnbWFpbC5jb20&src=MDJlNGI3OGQ4Zjg2MjFkY2FmOGRjODkyYTc5ODcxM2RiZDAwOTE5ZWZjNDYwN2ZhNzYyYzcwYTZhNjZmMjI5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=N2JiOThmNjc1NjJmOTk2YzcwZTcxMDczZmRkZDJmYzBkNjc2NWU2M2RiMjFmYjE3ZWM3ZGRmNjFmNDBhYTFjM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZWMyOWIwNzViZTQzZjUwOTkxN2Y0ZmE1MGE3ODUyNzkxYTIyZWUxMDNhZDQ4ZGJmZDNlOWMyNTA1ZTk0MzVjY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ODIyOGJlZDY2OTc2OWFjZWI0NGQzM2EzNGEwODI3Y2Y3YTJhMzRkYmUwMWViYzkwODBkNzMyM2ExM2IxMDhmNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23D50000&color=%230B8043&color=%23F09300&color=%237CB342" style={{ border: "solid 1px #777", margin:"0 10% 10% 20%" }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
-		</div>
-	)
+interface Event {
+	title: string;
+	date: string;
+	time: string;
+	location: string;
+	description: string;
 }
+
+const Calendar = () => {
+	const events = {
+		"UPCOMING EVENTS": [
+			{
+				title: "AI Forum Kickoff",
+				date: "January 13th",
+				time: "7:30 pm",
+				location: "INV 013",
+				description: "First AI Forum session of the semester"
+			},
+			{
+				title: "AI Perception Lab First Meeting",
+				date: "January 14th",
+				time: "8:30 pm",
+				location: "Richards Hall 235",
+				description: "Initial meeting for AI Perception Lab"
+			},
+			{
+				title: "Kickoff Meeting",
+				date: "January 15th",
+				time: "6:00 pm",
+				location: "108 West Village G",
+				description: "General kickoff meeting"
+			},
+			{
+				title: "AI Bootcamp Session #1",
+				date: "January 22nd",
+				time: "6:00 pm",
+				location: "108 West Village G",
+				description: "First bootcamp session"
+			},
+			{
+				title: "AI Forum Session #1",
+				date: "January 27th",
+				time: "7:30 pm",
+				location: "INV 013",
+				description: "First regular AI Forum session"
+			},
+		
+		],
+		"HACKATHON EVENT": [
+			{
+				title: "InnovAIte",
+				date: "February 15-16",
+				time: "All Day",
+				location: "Curry Student Center",
+				description: "InnovAIte hackathon event"
+			}
+		],
+		"AI BOOTCAMP SERIES": [
+			{
+				title: "Introduction to AI, Math Essentials, and Python Basics",
+				date: "January 22nd",
+				time: "6:00 PM",
+				location: "108 West Village G",
+				description: "First session of AI Bootcamp covering fundamentals"
+			},
+			{
+				title: "Data Preprocessing and Exploratory Data Analysis (EDA)",
+				date: "February 5th",
+				time: "6:00 PM",
+				location: "108 West Village G",
+				description: "Learn about data preparation and analysis techniques"
+			},
+			{
+				title: "Supervised Learning Basics: Regression & Classification",
+				date: "February 19th",
+				time: "6:00 PM",
+				location: "108 West Village G",
+				description: "Introduction to fundamental machine learning concepts"
+			},
+			{
+				title: "Neural Networks and Model Evaluation",
+				date: "March 12th",
+				time: "6:00 PM",
+				location: "108 West Village G",
+				description: "Deep learning fundamentals and model assessment"
+			}
+		],
+		"GENERAL MEETINGS": [
+			{
+				title: "General Discussion Meeting",
+				date: "January 29th",
+				time: "6:00 pm",
+				location: "108 West Village G",
+				description: "Monthly general discussion meeting"
+			},
+			{
+				title: "General Meeting",
+				date: "February 12th",
+				time: "6:00 pm",
+				location: "108 West Village G",
+				description: "Regular general meeting"
+			},
+			{
+				title: "General Meeting",
+				date: "February 26th",
+				time: "6:00 pm",
+				location: "108 West Village G",
+				description: "Regular general meeting"
+			},
+			{
+				title: "E-Board Elections",
+				date: "March 19th",
+				time: "6:00 pm",
+				location: "108 West Village G",
+				description: "Executive Board Elections"
+			}
+		],
+		"RECURRING EVENTS": [
+			{
+				title: "AI Perception Lab Meetings",
+				date: "Every Tuesday",
+				time: "8:30 pm",
+				location: "Richards Hall 235",
+				description: "Weekly AI Perception Lab meetings"
+			}
+		]
+	};
+
+	return (
+		<div className="w-full max-w-6xl mx-auto px-8 pt-4 pb-48">
+			<div 
+				className="border border-[#21212120] rounded-lg shadow-lg p-8"
+				style={{
+					maxHeight: '600px',
+					overflowY: 'scroll',
+					backgroundColor: '#F2F2F2',
+					scrollbarWidth: 'thin',
+					scrollbarColor: '#394b3f #e5e5e5',
+					WebkitOverflowScrolling: 'touch',
+				}}
+			>
+				{Object.entries(events).map(([section, dateEvents]) => (
+					<div key={section} className="mb-12">
+						<div className="border-b border-black py-3 mb-6">
+							<h3 className="text-lg font-medium">{section}</h3>
+						</div>
+						
+						{dateEvents.map((event, index) => (
+							<motion.div 
+								key={index}
+								whileHover={{ 
+									backgroundColor: '#ffffff',
+									x: 10
+								}}
+								className="border-b border-[#21212155] last:border-b-0 p-6 cursor-pointer transition-all hover:bg-white"
+							>
+								<div className="flex flex-col gap-4">
+									<div className="flex justify-between items-start">
+										<div className="space-y-2">
+											<div className="text-xl font-medium">{event.title}</div>
+											<div className="text-base text-gray-600">{event.location}</div>
+										</div>
+										<div className="text-right">
+											<div className="text-sm font-medium text-[#394b3f]">{event.date}</div>
+											<div className="text-sm text-gray-500">{event.time}</div>
+										</div>
+									</div>
+									<p className="text-sm text-gray-600">{event.description}</p>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				))}
+			</div>
+
+			<style jsx>{`
+				div::-webkit-scrollbar {
+					width: 12px;
+				}
+				div::-webkit-scrollbar-track {
+					background: #e5e5e5;
+					border-radius: 6px;
+					margin: 4px;
+				}
+				div::-webkit-scrollbar-thumb {
+					background-color: #394b3f;
+					border-radius: 6px;
+					border: 2px solid #F2F2F2;
+					min-height: 40px;
+				}
+				div::-webkit-scrollbar-thumb:hover {
+					background-color: #2a3a2f;
+				}
+			`}</style>
+		</div>
+	);
+};
+
+export default Calendar;

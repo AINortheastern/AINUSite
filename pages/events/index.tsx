@@ -1,10 +1,11 @@
 "use client";
 import {
 	Eventscalender,
-	Heroevents,
+	Heroevents
 } from "@/container";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
+
 
 export default function Services() {
 	useEffect(() => {
@@ -15,11 +16,10 @@ export default function Services() {
 	}, []);
 	return (
 		<>
-			{/* <Curve backgroundColor={"#f1f1f1"}> */}
+			<Curve backgroundColor={"#F2F2F2"}>
 				<Heroevents />
 				<Eventscalender />
-	
-			{/* </Curve> */}
+			</Curve>
 		</>
 	);
 }

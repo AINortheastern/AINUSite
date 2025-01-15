@@ -5,7 +5,7 @@ import {
 
 } from "@/container";
 import { useEffect } from "react";
-import { Curve, Ready } from "@/components";
+import { Curve, Ready, Footer } from "@/components";
 
 export default function Work() {
 	useEffect(() => {
@@ -21,6 +21,8 @@ export default function Work() {
 				<Chelenge />
 				<Ready />
 			</Curve>
+			<Footer />
 		</>
+		
 	);
 }
