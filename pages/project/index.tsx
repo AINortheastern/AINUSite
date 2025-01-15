@@ -1,9 +1,5 @@
 "use client";
-import {
-	Heroworkiz,
-	Chelenge,
-
-} from "@/container";
+import { Heroworkiz, Chelenge } from "@/container";
 import { useEffect } from "react";
 import { Curve, Ready, Footer } from "@/components";
 
@@ -23,6 +19,5 @@ export default function Work() {
 			</Curve>
 			<Footer />
 		</>
-		
 	);
 }

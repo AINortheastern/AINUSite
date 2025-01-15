@@ -14,12 +14,7 @@ export default function MobileNav() {
 		<>
 			<div className="w-full hidden justify-between items-center h-[8vh] padding-x sm:flex xm:flex md:flex">
 				<Link href={"/"}>
-					<Image
-						src={logo}
-						alt="ochi logo"
-						width={70}
-						height={70}
-					/>
+					<Image src={logo} alt="ochi logo" width={70} height={70} />
 				</Link>
 				<HiOutlineMenuAlt4
 					onClick={() => setToggle(true)}
@@ -33,15 +28,11 @@ export default function MobileNav() {
 						animate={{ y: 0 }}
 						exit={{ y: "-100%" }}
 						transition={{ duration: 1, ease: [0.3, 0.86, 0.36, 0.95] }}
-						className="fixed top-0 bottom-0 right-0 z-50 w-full min-h-screen flex justify-end items-end flex-col bg-secondry">
+						className="fixed top-0 bottom-0 right-0 z-50 w-full min-h-screen flex justify-end items-end flex-col bg-secondry"
+					>
 						<div className="w-full flex justify-between items-center h-[8vh] border-b border-[#f1f1f155] padding-x">
 							<Link href={"/"}>
-								<Image
-									src={logo}
-									alt="ochi logo"
-									width={70}
-									height={70}
-								/>
+								<Image src={logo} alt="ochi logo" width={70} height={70} />
 							</Link>
 							<IoMdClose
 								onClick={() => setToggle(false)}
@@ -54,7 +45,8 @@ export default function MobileNav() {
 									href={item.href}
 									key={item.id}
 									onClick={(toggle) => setToggle(!toggle)}
-									className="text-[80px] leading-[67px] font-FoundersGrotesk uppercase font-bold tracking-[-.9] text-background">
+									className="text-[80px] leading-[67px] font-FoundersGrotesk uppercase font-bold tracking-[-.9] text-background"
+								>
 									{item.title}
 								</Link>
 							))}

@@ -15,12 +15,9 @@ export default function App({
 		<>
 			<Navbar />
 			<AnimatePresence mode="wait">
-				<Component
-					key={router.route}
-					{...pageProps}
-				/>
+				<Component key={router.route} {...pageProps} />
 			</AnimatePresence>
-			<Footer/>
+			<Footer />
 		</>
 	);
 }

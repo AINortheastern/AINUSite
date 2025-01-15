@@ -44,27 +44,20 @@ export default function PlayVideo({ videosrc }: { videosrc: string }) {
 		<div
 			className="w-full relative overflow-hidden cursor-pointer"
 			ref={container}
-			onClick={togglePlay}>
-			<div
-				className="w-full h-full"
-				data-scroll
-				data-scroll-speed="-.8"
-				data-scroll-section>
-				<video
-					className="w-full h-full"
-					loop
-					ref={videoRef}
-					src={videosrc}
-				/>
+			onClick={togglePlay}
+		>
+			<div className="w-full h-full" data-scroll data-scroll-speed="-.8" data-scroll-section>
+				<video className="w-full h-full" loop ref={videoRef} src={videosrc} />
 				<motion.div
 					className={`w-full absolute top-[50%] transform translate-y-[-50%] gap-[30px] flex items-center justify-center ${
 						isPlaying && "hidden"
 					}`}
-					style={{ y: mq }}>
-				
+					style={{ y: mq }}
+				>
 					<div
 						className="w-[200px] sm:w-[150px] sm:h-[150px] xm:w-[100px] xm:h-[100px] bg-white rounded-full flex items-center justify-center cursor-pointer"
-						onClick={togglePlay}>
+						onClick={togglePlay}
+					>
 						<div className="relative w-full h-full">
 							<Image
 								style={{
@@ -84,7 +77,8 @@ export default function PlayVideo({ videosrc }: { videosrc: string }) {
 					onClick={togglePlay}
 					className={`w-full absolute top-[50%] transform translate-y-[-50%] gap-[30px] flex items-center justify-center ${
 						!isPlaying && "hidden"
-					}`}>
+					}`}
+				>
 					<button className="text-white text-[18px] bg-black px-[10px]  leading-none font-normal py-[5px] font-NeueMontreal rounded-[20px]">
 						pause
 					</button>

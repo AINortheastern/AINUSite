@@ -1,11 +1,7 @@
 "use client";
-import {
-	Eventscalender,
-	Heroevents
-} from "@/container";
+import { Eventscalender, Heroevents } from "@/container";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
-
 
 export default function Services() {
 	useEffect(() => {

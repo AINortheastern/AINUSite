@@ -11,14 +11,13 @@ export default function MaskText({ children }: { children: string[] }) {
 	return (
 		<div ref={ref}>
 			{children.map((phrase, index) => (
-				<div
-					key={index}
-					className="overflow-hidden">
+				<div key={index} className="overflow-hidden">
 					<motion.p
 						custom={index}
 						variants={animation}
 						initial="initial"
-						animate={inView ? "visible" : ""}>
+						animate={inView ? "visible" : ""}
+					>
 						{phrase}
 					</motion.p>
 				</div>

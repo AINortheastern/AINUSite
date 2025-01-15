@@ -5,14 +5,14 @@ import { coreMemberes, additionalMembers } from "@/constants";
 export default function Publication() {
 	return (
 		<>
-		<section className="w-full bg-marquee padding-y rounded-t-[20px]">
-			<div className="w-full bg-marquee z-10 relative rounded-t-[20px]">
-				<Marquee
-					title="Team"
-					className="pb-[50px] lg:pb-[40px] md:pb-[30px] sm:pb-[20px] xm:pb-[15px] text-[540px] leading-[330px] lg:text-[380px] lg:leading-[240px] md:text-[300px] md:leading-[160px] sm:text-[230px] sm:leading-[140px] xm:text-[130px] xm:leading-[80px]"
-				/>
-			</div>
-			{/* <div className="w-full padding-x py-[30px]">
+			<section className="w-full bg-marquee padding-y rounded-t-[20px]">
+				<div className="w-full bg-marquee z-10 relative rounded-t-[20px]">
+					<Marquee
+						title="Team"
+						className="pb-[50px] lg:pb-[40px] md:pb-[30px] sm:pb-[20px] xm:pb-[15px] text-[540px] leading-[330px] lg:text-[380px] lg:leading-[240px] md:text-[300px] md:leading-[160px] sm:text-[230px] sm:leading-[140px] xm:text-[130px] xm:leading-[80px]"
+					/>
+				</div>
+				{/* <div className="w-full padding-x py-[30px]">
 				<div className="w-full flex justify-between gap-[20px] flex-wrap sm:flex-col xm:flex-col">
 					<div>
 						<h3 className="paragraph font-medium text-white font-NeueMontreal">
@@ -44,96 +44,87 @@ export default function Publication() {
 					</div>
 				</div>
 			</div> */}
+			</section>
 
-		</section>
-
-		{/* <section className="w-full min-h-screen"> */}
+			{/* <section className="w-full min-h-screen"> */}
 			<div className="w-full flex flex-col justify-between">
 				<div className="w-full flex flex-col">
 					<div className="w-full margin padding-x">
 						<div>
 							<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
-							E-Board Members
+								E-Board Members
 							</h1>
 						</div>
 					</div>
-		
 				</div>
 			</div>
-		{/* </section> */}
-		
-		<div className="w-full padding-x py-[30px]">
-			<div className="grid grid-cols-4 gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-				{coreMemberes.map((item) => (
-					<div
-						key={item.id}
-						className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
-					>
-						<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md bg-white">
-							<Image
-								src={item.src}
-								alt={`${item.name}'s photo`}
-								className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
-							/>
+			{/* </section> */}
+
+			<div className="w-full padding-x py-[30px]">
+				<div className="grid grid-cols-4 gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+					{coreMemberes.map((item) => (
+						<div
+							key={item.id}
+							className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
+						>
+							<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md bg-white">
+								<Image
+									src={item.src}
+									alt={`${item.name}'s photo`}
+									className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+								/>
+							</div>
+							<div className="w-full text-center mt-4 space-y-1">
+								<h4 className="text-xl font-light text-gray-800 font-NeueMontreal">{item.name}</h4>
+								<p className="text-sm font-bold text-[#394b3f] font-NeueMontreal">
+									{item.designation}
+								</p>
+							</div>
 						</div>
-						<div className="w-full text-center mt-4 space-y-1">
-							<h4 className="text-xl font-light text-gray-800 font-NeueMontreal">
-								{item.name}
-							</h4>
-							<p className="text-sm font-bold text-[#394b3f] font-NeueMontreal">
-								{item.designation}
-							</p>
-						</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
-		</div>
 
+			{/**team members */}
 
-{/**team members */}
-
-		{/* <section className="w-full min-h-screen"> */}
-		<div className="w-full flex flex-col justify-between">
+			{/* <section className="w-full min-h-screen"> */}
+			<div className="w-full flex flex-col justify-between">
 				<div className="w-full flex flex-col">
 					<div className="w-full margin padding-x">
 						<div>
 							<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
-							Contributors
+								Contributors
 							</h1>
 						</div>
 					</div>
-		
 				</div>
 			</div>
-		{/* </section> */}
-		
-		<div className="w-full padding-x py-[30px]">
-			<div className="grid grid-cols-4 gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-				{additionalMembers.map((item) => (
-					<div
-						key={item.id}
-						className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
-					>
-						<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md">
-							<Image
-								src={item.src}
-								alt={`${item.name}'s photo`}
-								className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
-							/>
-						</div>
-						<div className="w-full text-center mt-4 space-y-1">
-							<h4 className="text-xl font-light text-gray-800 font-NeueMontreal">
-								{item.name}
-							</h4>
-							<p className="text-sm font-bold text-gray-600 font-NeueMontreal">
-								{item.designation}
-							</p>
-						</div>
-					</div>
-				))}
-			</div>
-		</div>
+			{/* </section> */}
 
+			<div className="w-full padding-x py-[30px]">
+				<div className="grid grid-cols-4 gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+					{additionalMembers.map((item) => (
+						<div
+							key={item.id}
+							className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
+						>
+							<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md">
+								<Image
+									src={item.src}
+									alt={`${item.name}'s photo`}
+									className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+								/>
+							</div>
+							<div className="w-full text-center mt-4 space-y-1">
+								<h4 className="text-xl font-light text-gray-800 font-NeueMontreal">{item.name}</h4>
+								<p className="text-sm font-bold text-gray-600 font-NeueMontreal">
+									{item.designation}
+								</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
 		</>
 	);
 }

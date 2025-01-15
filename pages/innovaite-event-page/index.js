@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { Curve } from "@/components";
 import { InnovAIteEvent, HeroInnovaite } from "@/container";
 
-
 export default function Innovaite() {
 	// useEffect(() => {
 	// 	(async () => {
@@ -14,7 +13,7 @@ export default function Innovaite() {
 	return (
 		<>
 			<Curve backgroundColor={"#f1f1f1"}>
-        		<HeroInnovaite/>
+				<HeroInnovaite />
 				<InnovAIteEvent />
 			</Curve>
 		</>

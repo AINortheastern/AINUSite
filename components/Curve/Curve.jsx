@@ -6,7 +6,7 @@ import { text, curve, translate } from "@/motion";
 
 const routes = {
 	"/": "Home",
-	
+
 	"/aboutus": "Team Members",
 	"/events": "Events",
 	"/innovaite-event-page": "InnovAIte",
@@ -52,7 +52,8 @@ export default function Curve({ children, backgroundColor }) {
 			/>
 			<motion.p
 				className="absolute left-1/2 top-[40%] text-white text-[50px] z-[60] -translate-x-1/2 text-center"
-				{...anim(text)}>
+				{...anim(text)}
+			>
 				{routes[router.route]}
 			</motion.p>
 			{dimensions.width != null && <SVG {...dimensions} />}
@@ -82,7 +83,8 @@ const SVG = ({ height, width }) => {
 		<motion.svg
 			className="fixed h w-full pointer-events-none
 				 left-0 top-0 z-50"
-			{...anim(translate)}>
+			{...anim(translate)}
+		>
 			<motion.path {...anim(curve(initialPath, targetPath))} />
 		</motion.svg>
 	);

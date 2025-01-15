@@ -22,19 +22,19 @@ export default function Footer() {
 						</h1> */}
 
 						<div className="flex justify-between">
-						<div className="pt-[50px]">
-							<h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
-								Socials:
-							</h1>
-							{footerItems.map((item) => (
-								<LinkHover
-									title={item.title}
-									href={item.href}
-									key={item.id}
-									className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-secondry capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
-								/>
-							))}
-						</div>
+							<div className="pt-[50px]">
+								<h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
+									Socials:
+								</h1>
+								{footerItems.map((item) => (
+									<LinkHover
+										title={item.title}
+										href={item.href}
+										key={item.id}
+										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium text-secondry capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
+									/>
+								))}
+							</div>
 							<div className="pt-[50px]">
 								<h1 className="paragraph font-medium font-NeueMontreal text-secondry pb-[20px]">
 									Location:
@@ -50,12 +50,11 @@ export default function Footer() {
 										title={`Massachusetts, 02115`}
 										href="#"
 									/>
-										<LinkHover
+									<LinkHover
 										className="before:h-[1px] after:h-[1px] w-fit paragraph font-medium  capitalize flex flex-col before:bottom-[1px] after:bottom-[1px]"
 										title={`United States`}
 										href="#"
 									/>
-					
 								</div>
 							</div>
 							<div className="pt-[50px]">
@@ -73,9 +72,7 @@ export default function Footer() {
 							</div>
 						</div>
 						<div className="pt-[50px] flex gap-x-[20px]">
-							<h1 className="paragraph font-medium font-NeueMontreal text-secondry">
-								Email:
-							</h1>
+							<h1 className="paragraph font-medium font-NeueMontreal text-secondry">Email:</h1>
 							<LinkHover
 								title="aiclub.neu@gmail.com"
 								href="#"
@@ -88,12 +85,7 @@ export default function Footer() {
 			<div className="w-full pt-[40px] pb-[30px] flex justify-between sm:flex-col xm:flex-col sm:gap-[20px] xm:gap-[20px]">
 				<div className="w-1/2 sm:w-full xm:w-full">
 					<Link href={"/"}>
-						<Image
-							src={logo}
-							alt="neu ai logo"
-							width={70}
-							height={70}
-						/>
+						<Image src={logo} alt="neu ai logo" width={70} height={70} />
 					</Link>
 				</div>
 				<div className="w-1/2 h-full flex gap-[10px] justify-between items-end sm:w-full xm:w-full sm:flex-col xm:flex-col sm:items-start xm:items-start">

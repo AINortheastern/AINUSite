@@ -18,7 +18,8 @@ export default function Hero() {
 							Events
 						</h1>
 						<p className="text-xl md:text-2xl text-[#212121] opacity-80 max-w-[600px]">
-							Join us for exciting workshops, hackathons, and tech talks. Stay updated with all our upcoming events.
+							Join us for exciting workshops, hackathons, and tech talks. Stay updated with all our
+							upcoming events.
 						</p>
 					</div>
 				</div>

@@ -12,10 +12,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 
-export default function LogoMarquee({
-	children,
-	baseVelocity = 100,
-}: TlogoMarqueeProps) {
+export default function LogoMarquee({ children, baseVelocity = 100 }: TlogoMarqueeProps) {
 	const baseX = useMotionValue(0);
 	const { scrollY } = useScroll();
 	const scrollVelocity = useVelocity(scrollY);
@@ -45,9 +42,7 @@ export default function LogoMarquee({
 
 	return (
 		<div className="overflow-hidden flex whitespace-nowrap flex-wrap">
-			<motion.div
-				className="flex whitespace-nowrap items-center flex-nowrap"
-				style={{ x }}>
+			<motion.div className="flex whitespace-nowrap items-center flex-nowrap" style={{ x }}>
 				<span className="flex">{children} </span>
 				<span className="flex">{children} </span>
 				<span className="flex">{children} </span>
