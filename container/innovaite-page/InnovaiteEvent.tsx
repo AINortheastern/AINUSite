@@ -78,11 +78,11 @@ const InnovAIteEvent = () => {
 					<FaCalendarAlt className="text-6xl mb-4" style={{ color: "#394b3f" }} />
 					<h2 className="text-2xl font-bold font-NeueMontreal mb-2">Event Timeline</h2>
 					<p className="text-lg font-medium font-NeueMontreal  text-center">
-						February 15th, 2025: 10:00 A.M. - 9:00 P.M.
+						February 15th and 16th
 					</p>
-					<p className="text-lg font-medium font-NeueMontreal  text-center">
+					{/* <p className="text-lg font-medium font-NeueMontreal  text-center">
 						February 16th, 2025: 10:00 A.M. - 7:00 P.M.
-					</p>
+					</p> */}
 				</div>
 				<div
 					className="aspect-square p-6 flex flex-col justify-center items-center"
@@ -101,7 +101,7 @@ const InnovAIteEvent = () => {
 					<FaUsers className="text-6xl mb-4" style={{ color: "#f1c347" }} />
 					<h2 className="text-2xl font-bold font-NeueMontreal mb-2">Team Details</h2>
 					<p className="text-lg font-medium font-NeueMontreal text-center">
-						Team size: 4-10 members Open to all university students
+						Team size: 4-6 members
 					</p>
 				</div>
 			</div>
@@ -122,7 +122,7 @@ const InnovAIteEvent = () => {
 					<FaTrophy className="text-6xl mb-4" style={{ color: "#f6c3d7" }} />
 					<h2 className="text-2xl font-bold font-NeueMontreal  mb-2">Judging</h2>
 					<p className="text-lg font-medium font-NeueMontreal  text-center">
-						Panel of 2-3 professors from participating institutions Awards and perks available
+          Panel of 3 distinguished industry experts Awards for winning teams 
 					</p>
 				</div>
 				<div

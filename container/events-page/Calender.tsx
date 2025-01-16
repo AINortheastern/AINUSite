@@ -5,8 +5,10 @@
  */
 
 /**
- * Chandus Calendar Implementation (Revamp)
+ * Chandus Calendar Implementation (Revamp) / Changed by Jason Balayev
  */
+
+
 import { motion } from "framer-motion";
 
 interface Event {
@@ -138,15 +140,19 @@ const Calendar = () => {
 
 	return (
 		<div className="w-full max-w-6xl mx-auto px-8 pt-4 pb-48">
-			<div
-				className="border border-[#21212120] rounded-lg shadow-lg p-8"
+			<div 
+				className="border border-[#21212120] rounded-lg shadow-lg p-8 overflow-y-auto"
 				style={{
-					maxHeight: "600px",
-					overflowY: "scroll",
-					backgroundColor: "#F2F2F2",
-					scrollbarWidth: "thin",
-					scrollbarColor: "#394b3f #e5e5e5",
-					WebkitOverflowScrolling: "touch",
+					maxHeight: '600px',
+					backgroundColor: '#F2F2F2',
+					scrollbarWidth: 'thin',
+					scrollbarColor: '#394b3f #e5e5e5',
+					WebkitOverflowScrolling: 'touch',
+				}}
+				onWheel={(e) => {
+					e.stopPropagation();  // Prevent page scrolling
+					const container = e.currentTarget;
+					container.scrollTop += e.deltaY;
 				}}
 			>
 				{Object.entries(events).map(([section, dateEvents]) => (
