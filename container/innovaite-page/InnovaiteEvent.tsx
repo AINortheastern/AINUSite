@@ -16,9 +16,15 @@ import SocialIcons from "@/components/SocialIcons";
 
 // Placeholder images (replace with actual event images)
 const eventImages = [
-	"/innovaite2024.jpg",
-	// '/event2.jpg',
-	// '/event3.jpg'
+	"/In1.jpg",
+	"/In2.jpg",
+	"/In3.jpg",
+	"/In4.jpg",
+	"/In5.jpg",
+	"/In6.jpg",
+	"/In7.jpg",
+	"/In8.jpg",
+	"/In9.jpg",
 ];
 
 const InnovAIteEvent = () => {
@@ -130,20 +136,23 @@ const InnovAIteEvent = () => {
 			</div>
 
 			{/* Event Photos */}
-			<div className="w-full grid grid-cols-3 gap-0 mt-12 px-12">
-				<div
-					className="aspect-square relative overflow-hidden"
-					style={{ backgroundColor: "rgba(57, 75, 63, 0.2)" }}
-				>
-					<Image
-						src={eventImages[0]}
-						alt="Event Image 1"
-						fill
-						sizes="(max-width: 768px) 100vw, 33vw"
-						className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-						priority
-					/>
-				</div>
+			<div className="w-full grid grid-cols-3 gap-4 mt-12 px-12">
+				{eventImages.map((image, index) => (
+					<div
+						key={index}
+						className="aspect-square relative overflow-hidden"
+						style={{ backgroundColor: "rgba(57, 75, 63, 0.2)" }}
+					>
+						<Image
+							src={image}
+							alt={`Event Image ${index + 1}`}
+							fill
+							sizes="(max-width: 768px) 100vw, 33vw"
+							className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+							priority={index < 3} // Only prioritize loading first 3 images
+						/>
+					</div>
+				))}
 			</div>
 
 			<FAQ />
