@@ -22,34 +22,34 @@ interface Event {
 const Calendar = () => {
 	const events = {
 		"UPCOMING EVENTS": [
-			{
-				title: "AI Forum Kickoff",
-				date: "January 13th",
-				time: "7:30 pm",
-				location: "INV 013",
-				description: "First AI Forum session of the semester",
-			},
-			{
-				title: "AI Perception Lab First Meeting",
-				date: "January 14th",
-				time: "8:30 pm",
-				location: "Richards Hall 235",
-				description: "Initial meeting for AI Perception Lab",
-			},
-			{
-				title: "Kickoff Meeting",
-				date: "January 15th",
-				time: "6:00 pm",
-				location: "108 West Village G",
-				description: "General kickoff meeting",
-			},
-			{
-				title: "AI Bootcamp Session #1",
-				date: "January 22nd",
-				time: "6:00 pm",
-				location: "108 West Village G",
-				description: "First bootcamp session",
-			},
+			// {
+			// 	title: "AI Forum Kickoff",
+			// 	date: "January 13th",
+			// 	time: "7:30 pm",
+			// 	location: "INV 013",
+			// 	description: "First AI Forum session of the semester",
+			// },
+			// {
+			// 	title: "AI Perception Lab First Meeting",
+			// 	date: "January 14th",
+			// 	time: "8:30 pm",
+			// 	location: "Richards Hall 235",
+			// 	description: "Initial meeting for AI Perception Lab",
+			// },
+			// {
+			// 	title: "Kickoff Meeting",
+			// 	date: "January 15th",
+			// 	time: "6:00 pm",
+			// 	location: "108 West Village G",
+			// 	description: "General kickoff meeting",
+			// },
+			// {
+			// 	title: "AI Bootcamp Session #1",
+			// 	date: "January 22nd",
+			// 	time: "6:00 pm",
+			// 	location: "108 West Village G",
+			// 	description: "First bootcamp session",
+			// },
 			{
 				title: "AI Forum Session #1",
 				date: "January 27th",
