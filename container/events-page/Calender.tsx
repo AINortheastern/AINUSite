@@ -21,15 +21,9 @@ interface Event {
 
 const Calendar = () => {
 	const events = {
-		"UPCOMING EVENTS": [
-			{
-				title: "AI Forum Session #1",
-				date: "January 27th",
-				time: "7:30 pm",
-				location: "INV 013",
-				description: "First regular AI Forum session",
-			},
-		],
+		// "UPCOMING EVENTS": [
+			
+		// ],
 		"HACKATHON EVENT": [
 			{
 				title: "InnovAIte",
