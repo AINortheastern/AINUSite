@@ -45,7 +45,7 @@ export const footerItems = [
 	{
 		id: 1,
 		title: "Discord",
-		href: "https://discord.com/invite/CJFMC6BNyz",
+		href: "https://discord.gg/fCVWX4789J",
 	},
 	{
 		id: 2,
