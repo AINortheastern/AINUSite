@@ -37,6 +37,11 @@ export const navbarItems = [
 		title: "InnovAIte",
 		href: "/innovaite-event-page",
 	},
+	{
+		id: 4,
+		title: "Projects",
+		href: "/project",
+	},
 ];
 
 // Footer
@@ -101,6 +106,11 @@ export const footernavbarItems = [
 		id: 4,
 		title: "InnovAIte",
 		href: "innovaite-event-page",
+	},
+	{
+		id: 5,
+		title: "Projects",
+		href: "project",
 	},
 ];
 

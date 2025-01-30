@@ -1,5 +1,12 @@
-import { projectItem } from "@/constants";
-import { Heading, ProjectCard, Tags } from "@/components";
+// import { projectItem } from "@/constants";
+// import { Heading, ProjectCard, Tags } from "@/components";
+
+export default function Projects() {
+	return null;
+}
+
+/*
+Original Projects Component:
 
 export default function Projects() {
 	return (
@@ -26,17 +33,7 @@ export default function Projects() {
 					</div>
 				))}
 			</div>
-			{/* <div className="w-full flex justify-center">
-				<div className="flex items-center justify-between bg-secondry cursor-pointer rounded-full group">
-					<RoundButton
-						href="#"
-						title="view all projects"
-						bgcolor="#000"
-						className="bg-white text-black"
-						style={{ color: "#fff" }}
-					/>
-				</div>
-			</div> */}
 		</section>
 	);
 }
+*/

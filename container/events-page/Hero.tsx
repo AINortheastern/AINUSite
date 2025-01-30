@@ -1,4 +1,7 @@
 import { Marquee } from "@/components";
+import { motion } from "framer-motion";
+import { logo } from "@/public";
+import Image from "next/image";
 
 export default function Hero() {
 	return (
@@ -14,9 +17,29 @@ export default function Hero() {
 			<div className="w-full bg-[#F2F2F2] padding-y">
 				<div className="w-full margin padding-x">
 					<div className="max-w-[90%] mx-auto">
-						<h1 className="heading text-[120px] md:text-[180px] tracking-[-3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase mb-4">
-							Events
-						</h1>
+						<div className="flex items-center gap-[20px]">
+						<motion.div
+										initial={{ opacity: 0, x: -50 }}
+										animate={{ opacity: 1, x: 0 }}
+										transition={{
+											duration: 0.8,
+											delay: 0.5,
+											ease: [0.16, 1, 0.3, 1],
+										}}
+									>
+										<Image
+											src={logo}
+											alt="NUAI Logo"
+											className="w-auto max-h-[95px] object-contain rounded-[10px] mt-[10px]
+												md:max-h-[63px]
+												sm:max-h-[45px] 
+												xm:max-h-[40px]"
+										/>
+									</motion.div>
+							<h1 className="heading text-[120px] md:text-[180px] tracking-[-3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase mb-4">
+								Events
+							</h1>
+						</div>
 						<p className="text-xl md:text-2xl text-[#212121] opacity-80 max-w-[600px]">
 							Join us for exciting workshops, hackathons, and tech talks. Stay updated with all our
 							upcoming events.

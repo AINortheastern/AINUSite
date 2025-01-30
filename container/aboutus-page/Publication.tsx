@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Marquee } from "@/components";
 import { coreMemberes, additionalMembers } from "@/constants";
+import { motion } from "framer-motion";
+import { logo } from "@/public";
 
 export default function Publication() {
 	return (
@@ -51,9 +53,29 @@ export default function Publication() {
 				<div className="w-full flex flex-col">
 					<div className="w-full margin padding-x">
 						<div>
-							<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
-								E-Board Members
-							</h1>
+							<div className="flex items-center gap-[20px]">
+									<motion.div
+										initial={{ opacity: 0, x: -50 }}
+										animate={{ opacity: 1, x: 0 }}
+										transition={{
+											duration: 0.8,
+											delay: 0.5,
+											ease: [0.16, 1, 0.3, 1],
+										}}
+									>
+										<Image
+											src={logo}
+											alt="NUAI Logo"
+											className="w-auto max-h-[95px] object-contain rounded-[10px] mt-[10px]
+												md:max-h-[63px]
+												sm:max-h-[45px] 
+												xm:max-h-[40px]"
+										/>
+									</motion.div>
+								<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
+									E-Board Members
+								</h1>
+							</div>
 						</div>
 					</div>
 				</div>

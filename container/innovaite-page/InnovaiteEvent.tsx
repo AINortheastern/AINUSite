@@ -14,7 +14,6 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 import SocialIcons from "@/components/SocialIcons";
 
-// Placeholder images (replace with actual event images)
 const eventImages = [
 	"/In1.jpg",
 	"/In2.jpg",
@@ -30,22 +29,32 @@ const eventImages = [
 const InnovAIteEvent = () => {
 	return (
 		<section className="w-full bg-background">
-			{/* Logo and Register Button Section */}
 			<div className="w-full min-h-[60vh] flex items-center">
 				<div className="w-full flex items-center justify-between px-12">
-					{/* Logo Container - 70% */}
-					<div className="w-[70%] flex justify-center items-center">
-						<Image
-							width={800}
-							height={800}
-							src={"/InnovaiteLogo.png"}
-							alt="Innovaite Logo"
-							className="w-[80%] object-contain transition-all duration-300"
-							priority
-						/>
+ 					<div className="w-[70%] flex justify-center items-center">
+						<motion.div
+							className="relative group"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.7, ease: "easeOut" }}
+						>
+							<div className="relative p-16 rounded-[40px] bg-[#f1f1f1] 
+								border-[3px] border-[#212121] shadow-[8px_8px_0px_0px_rgba(33,33,33,0.8)]
+								transition-all duration-300 group-hover:shadow-[12px_12px_0px_0px_rgba(33,33,33,0.8)]
+								group-hover:translate-x-[-4px] group-hover:translate-y-[-4px]"
+							>
+								<Image
+									width={800}
+									height={800}
+									src={"/InnovaiteLogo.png"}
+									alt="Innovaite Logo"
+									className="w-[80%] object-contain mix-blend-darken"
+									priority
+								/>
+							</div>
+						</motion.div>
 					</div>
 
-					{/* Button Container - 30% */}
 					<div className="w-[30%] flex justify-center items-center">
 						<Link
 							href="https://docs.google.com/forms/d/e/1FAIpQLScdHp933j3lFSI_sqtj5tsmaPAUz4W_kOL26UPIKPzKb5hc-w/viewform"
@@ -61,7 +70,6 @@ const InnovAIteEvent = () => {
 				</div>
 			</div>
 
-			{/* Rest of your existing content */}
 			<div className="pl-[50px] sm:px-[20px] xm:px-[20px]">
 				<p className="sub-heading font-medium font-NeueMontreal text-black">
 					InnovAIte Hackathon is a 30-hour intensive project development event bringing together
@@ -69,24 +77,20 @@ const InnovAIteEvent = () => {
 				</p>
 			</div>
 
-			{/* Event Details */}
 			<div className="w-full grid grid-cols-3 gap-0 mt-12 px-12">
 				<div
 					className="aspect-square p-6 flex flex-col justify-center items-center"
-					style={{ backgroundColor: "rgba(57, 75, 63, 0.2)" }} // #394b3f with opacity
+					style={{ backgroundColor: "rgba(57, 75, 63, 0.2)" }} 
 				>
 					<FaCalendarAlt className="text-6xl mb-4" style={{ color: "#394b3f" }} />
 					<h2 className="text-2xl font-bold font-NeueMontreal mb-2">Event Timeline</h2>
 					<p className="text-lg font-medium font-NeueMontreal  text-center">
 						February 15th and 16th
 					</p>
-					{/* <p className="text-lg font-medium font-NeueMontreal  text-center">
-						February 16th, 2025: 10:00 A.M. - 7:00 P.M.
-					</p> */}
 				</div>
 				<div
 					className="aspect-square p-6 flex flex-col justify-center items-center"
-					style={{ backgroundColor: "rgba(165, 186, 191, 0.2)" }} // #a5babf with opacity
+					style={{ backgroundColor: "rgba(165, 186, 191, 0.2)" }} 
 				>
 					<FaMapMarkerAlt className="text-6xl mb-4" style={{ color: "#a5babf" }} />
 					<h2 className="text-2xl font-bold font-NeueMontreal mb-2">Event Location</h2>
@@ -96,7 +100,7 @@ const InnovAIteEvent = () => {
 				</div>
 				<div
 					className="aspect-square p-6 flex flex-col justify-center items-center"
-					style={{ backgroundColor: "rgba(241, 195, 71, 0.2)" }} // #f1c347 with opacity
+					style={{ backgroundColor: "rgba(241, 195, 71, 0.2)" }} 
 				>
 					<FaUsers className="text-6xl mb-4" style={{ color: "#f1c347" }} />
 					<h2 className="text-2xl font-bold font-NeueMontreal mb-2">Team Details</h2>
@@ -135,8 +139,7 @@ const InnovAIteEvent = () => {
 				</div>
 			</div>
 
-			{/* Event Photos */}
-			<div className="w-full grid grid-cols-3 gap-4 mt-12 px-12">
+ 			<div className="w-full grid grid-cols-3 gap-4 mt-12 px-12">
 				{eventImages.map((image, index) => (
 					<div
 						key={index}
@@ -149,36 +152,30 @@ const InnovAIteEvent = () => {
 							fill
 							sizes="(max-width: 768px) 100vw, 33vw"
 							className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-							priority={index < 3} // Only prioritize loading first 3 images
+							priority={index < 3}  
 						/>
 					</div>
 				))}
 			</div>
 
 			<FAQ />
-			{/* FAQ Section */}
-
-			{/* <Organizers /> */}
-
-			{/*Sponsors Callout*/}
+		 
 			<section className="w-full mt-12 px-12 flex flex-col items-center">
 				{/* Centered Heading */}
 				<h2 className="text-3xl font-bold font-NeueMontreal text-[#394b3f] mb-6 text-center">
 					Contact us for Sponsoring
 				</h2>
 
-				{/* Large Button */}
-				<button
+ 				<button
 					className="p-6 w-full md:w-auto text-xl font-bold font-NeueMontreal text-white bg-[#f1c347] hover:bg-[#dba339] rounded-lg shadow-lg transition-all duration-300 text-center"
 					onClick={() => window.open("mailto:aiclub.neu@gmail.com")}
-					style={{ maxWidth: "400px" }} // Optional width limit for large screens
+					style={{ maxWidth: "400px" }}  
 				>
 					aiclub.neu@gmail.com
 				</button>
 			</section>
 
-			{/* Contact Us */}
-			<SocialIcons />
+ 			<SocialIcons />
 		</section>
 	);
 };
@@ -287,8 +284,7 @@ const FAQ = () => {
 					))}
 				</div>
 
-				{/* Right Column */}
-				<div>
+ 				<div>
 					{rightColumnItems.map((item) => (
 						<div
 							key={item.id}

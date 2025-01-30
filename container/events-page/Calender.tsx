@@ -5,7 +5,7 @@
  */
 
 /**
- * Chandus Calendar Implementation (Revamp) / Changed by Jason Balayev
+ * Chandus Calendar Implementation (Revamp) / Edited by Jason Balayev
  */
 
 
@@ -18,6 +18,13 @@ interface Event {
 	location: string;
 	description: string;
 }
+
+const sectionColors: { [key: string]: string } = {
+	"HACKATHON EVENT": "#9370DB",     
+	"AI BOOTCAMP SERIES": "#1E90FF",   
+	"GENERAL MEETINGS": "#4F7942",     
+	"RECURRING EVENTS": "#CD853F",     
+};
 
 const Calendar = () => {
 	const events = {
@@ -105,75 +112,100 @@ const Calendar = () => {
 	};
 
 	return (
-		<div className="w-full max-w-6xl mx-auto px-8 pt-4 pb-48">
-			<div 
-				className="border border-[#21212120] rounded-lg shadow-lg p-8 overflow-y-auto"
-				style={{
-					maxHeight: '600px',
-					backgroundColor: '#F2F2F2',
-					scrollbarWidth: 'thin',
-					scrollbarColor: '#394b3f #e5e5e5',
-					WebkitOverflowScrolling: 'touch',
-				}}
-				onWheel={(e) => {
-					e.stopPropagation();  // Prevent page scrolling
-					const container = e.currentTarget;
-					container.scrollTop += e.deltaY;
-				}}
-			>
-				{Object.entries(events).map(([section, dateEvents]) => (
-					<div key={section} className="mb-12">
-						<div className="border-b border-black py-3 mb-6">
-							<h3 className="text-lg font-medium">{section}</h3>
-						</div>
+		<div className="w-full bg-[#F2F2F2] py-24">
+			<div className="w-full max-w-6xl mx-auto px-8">
+				<div className="text-center mb-16">
+					<h2 className="text-[#212121] text-5xl md:text-6xl font-FoundersGrotesk font-bold uppercase tracking-tight">
+						Calendar
+					</h2>
+					<div className="w-24 h-1 bg-[#394b3f] mx-auto mt-4 rounded-full"/>
+				</div>
 
-						{dateEvents.map((event, index) => (
-							<motion.div
-								key={index}
-								whileHover={{
-									backgroundColor: "#ffffff",
-									x: 10,
-								}}
-								className="border-b border-[#21212155] last:border-b-0 p-6 cursor-pointer transition-all hover:bg-white"
+				<div 
+					className="border border-[#21212120] rounded-xl shadow-lg p-8 overflow-y-auto bg-white"
+					style={{
+						maxHeight: '600px',
+						scrollbarWidth: 'thin',
+						scrollbarColor: '#394b3f #e5e5e5',
+						WebkitOverflowScrolling: 'touch',
+					}}
+					onWheel={(e) => {
+						e.stopPropagation();
+						const container = e.currentTarget;
+						container.scrollTop += e.deltaY;
+					}}
+				>
+					{Object.entries(events).map(([section, dateEvents]) => (
+						<div key={section} className="mb-12">
+							<div 
+								className="border-b-2 py-3 mb-6"
+								style={{ borderColor: sectionColors[section] }}
 							>
-								<div className="flex flex-col gap-4">
-									<div className="flex justify-between items-start">
-										<div className="space-y-2">
-											<div className="text-xl font-medium">{event.title}</div>
-											<div className="text-base text-gray-600">{event.location}</div>
-										</div>
-										<div className="text-right">
-											<div className="text-sm font-medium text-[#394b3f]">{event.date}</div>
-											<div className="text-sm text-gray-500">{event.time}</div>
-										</div>
-									</div>
-									<p className="text-sm text-gray-600">{event.description}</p>
-								</div>
-							</motion.div>
-						))}
-					</div>
-				))}
-			</div>
+								<h3 
+									className="text-xl font-FoundersGrotesk font-semibold"
+									style={{ color: sectionColors[section] }}
+								>
+									{section}
+								</h3>
+							</div>
 
-			<style jsx>{`
-				div::-webkit-scrollbar {
-					width: 12px;
-				}
-				div::-webkit-scrollbar-track {
-					background: #e5e5e5;
-					border-radius: 6px;
-					margin: 4px;
-				}
-				div::-webkit-scrollbar-thumb {
-					background-color: #394b3f;
-					border-radius: 6px;
-					border: 2px solid #f2f2f2;
-					min-height: 40px;
-				}
-				div::-webkit-scrollbar-thumb:hover {
-					background-color: #2a3a2f;
-				}
-			`}</style>
+							{dateEvents.map((event, index) => (
+								<motion.div
+									key={index}
+									whileHover={{
+										backgroundColor: `${sectionColors[section]}15`,
+										x: 10,
+									}}
+									className="border-b border-[#21212120] last:border-b-0 p-6 cursor-pointer transition-all rounded-lg"
+								>
+									<div className="flex flex-col gap-4">
+										<div className="flex justify-between items-start">
+											<div className="space-y-2">
+												<div className="text-xl font-semibold text-[#212121]">{event.title}</div>
+												<div 
+													className="text-base"
+													style={{ color: sectionColors[section] }}
+												>
+													{event.location}
+												</div>
+											</div>
+											<div className="text-right">
+												<div 
+													className="text-sm font-medium"
+													style={{ color: sectionColors[section] }}
+												>
+													{event.date}
+												</div>
+												<div className="text-sm text-gray-500">{event.time}</div>
+											</div>
+										</div>
+										<p className="text-sm text-gray-600">{event.description}</p>
+									</div>
+								</motion.div>
+							))}
+						</div>
+					))}
+				</div>
+
+				<style jsx>{`
+					div::-webkit-scrollbar {
+						width: 8px;
+					}
+					div::-webkit-scrollbar-track {
+						background: #e5e5e5;
+						border-radius: 4px;
+					}
+					div::-webkit-scrollbar-thumb {
+						background-color: #394b3f;
+						border-radius: 4px;
+						border: 2px solid #ffffff;
+						min-height: 40px;
+					}
+					div::-webkit-scrollbar-thumb:hover {
+						background-color: #2a3a2f;
+					}
+				`}</style>
+			</div>
 		</div>
 	);
 };

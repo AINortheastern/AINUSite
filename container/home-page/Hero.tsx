@@ -20,25 +20,24 @@ export default function Hero() {
 							<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
 								Building Tomorrow's <br />
 								<div className="flex items-center gap-[5px]">
-									<motion.span
-										initial={{ width: 0 }}
-										animate={{ width: "auto" }}
+									<motion.div
+										initial={{ opacity: 0, x: -50 }}
+										animate={{ opacity: 1, x: 0 }}
 										transition={{
-											ease: [0.86, 0, 0.07, 0.995],
-											duration: 1,
-											delay: 1.5,
+											duration: 0.8,
+											delay: 0.5,
+											ease: [0.16, 1, 0.3, 1],
 										}}
-										className="leading-[130px]"
 									>
 										<Image
 											src={logo}
-											alt="img"
+											alt="NUAI Logo"
 											className="w-auto max-h-[95px] object-contain rounded-[10px] mt-[10px]
 												md:max-h-[63px]
 												sm:max-h-[45px] 
 												xm:max-h-[40px]"
 										/>
-									</motion.span>
+									</motion.div>
 									<h1 className="heading tracking-[-1.3px] text-[#212121] font-semibold font-FoundersGrotesk uppercase">
 										Intelligence
 									</h1>
@@ -58,9 +57,6 @@ export default function Hero() {
 							</div>
 							<div className="w-[50%] xm:w-full sm:w-full flex justify-between xm:flex-col xm:items-start sm:flex-col sm:items-start gap-[20px]">
 								<div>
-									<p className="paragraph font-NeueMontreal text-secondry">
-										where innovation meets excellence
-									</p>
 								</div>
 								<div className="flex items-center gap-[5px] group">
 									<div className="rounded-[50px] border border-[#21212199] group-hover:bg-secondry  py-[3px] px-[12px] cursor-pointer">
@@ -103,16 +99,14 @@ export default function Hero() {
 const EventBanner = () => {
 	return (
 		<div className="w-full h-[120px] relative mt-[20px]">
-			{/* Background gradient stripe */}
-			<div
+ 			<div
 				className="absolute inset-0"
 				style={{
 					background: "linear-gradient(90deg, rgb(216 203 49), rgb(237, 241, 232))",
 				}}
 			/>
 
-			{/* Content */}
-			<div className="relative w-full h-full flex items-center justify-between px-12">
+ 			<div className="relative w-full h-full flex items-center justify-between px-12">
 				<div className="flex items-center space-x-8 h-[17vh]">
 					<div className="relative h-full w-[20vw] flex-shrink-0">
 						<Image src="/InnovaiteLogo.png" alt="Innovaite Logo" fill className="object-contain" />

@@ -2,6 +2,7 @@
 import { Eventscalender, Heroevents } from "@/container";
 import { useEffect } from "react";
 import { Curve, Ready } from "@/components";
+import MeetingTypes from "@/container/events-page/MeetingTypes";
 
 export default function Services() {
 	useEffect(() => {
@@ -15,6 +16,7 @@ export default function Services() {
 			<Curve backgroundColor={"#F2F2F2"}>
 				<Heroevents />
 				<Eventscalender />
+				<MeetingTypes />
 			</Curve>
 		</>
 	);

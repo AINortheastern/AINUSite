@@ -10,7 +10,7 @@ const routes = {
 	"/aboutus": "Team Members",
 	"/events": "Events",
 	"/innovaite-event-page": "InnovAIte",
-	"/project": "Project",
+	"/project": "Projects",
 };
 
 const anim = (variants) => {

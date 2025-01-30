@@ -23,13 +23,12 @@ export default function SocialIcons() {
 							target="_blank"
 							rel="noopener noreferrer"
 							className="flex items-center justify-center 
-              text-black font-bold text-sm sm:text-base 
-              hover:text-gray-700 
-              transition-colors duration-300 
+              text-black hover:text-[#f1c347] font-bold text-sm sm:text-base 
+              transition-all duration-300 ease-in-out
               p-2 rounded-full 
-              hover:bg-gray-100"
+              transform hover:scale-110"
 						>
-							{IconComponent && <IconComponent size={24} className="mr-2" />}
+							{IconComponent && <IconComponent size={32} className="mr-2" />}
 							<span className="hidden sm:inline">{item.title}</span>
 						</Link>
 					)
