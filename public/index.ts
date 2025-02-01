@@ -30,4 +30,4 @@ export { default as muskanBhatt } from "./MuskanBhatt.png";
 export { default as jasonBalayev } from "./JasonAI.jpg";
 export { default as averyDarlington } from "./AveryDarlington.png";
 
-export { default as swarmscape } from "./swarmscape.jpg";
+export { default as swarmscape } from "./swarm2.png";

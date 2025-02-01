@@ -12,8 +12,7 @@ export default function Insights() {
 	}, []);
 	return (
 		<>
-			<Curve backgroundColor={"#f1f1f1"}>
-				{/* <Heroinsights /> */}
+			<Curve backgroundColor={"#ffffff"}>
 				<Publicationinsights />
 			</Curve>
 		</>

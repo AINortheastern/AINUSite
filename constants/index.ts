@@ -19,6 +19,7 @@ import {
 	jasonBalayev,
 	averyDarlington,
 } from "@/public";
+import { StaticImageData } from "next/image";
 
 // Navbar
 export const navbarItems = [
@@ -114,25 +115,35 @@ export const footernavbarItems = [
 	},
 ];
 
-export const projectItem = [
+interface ProjectItem {
+	id: number;
+	title: string;
+	src: StaticImageData;
+	links: { id: number; title: string; }[];
+	description: string;
+	features: string[];
+	projectLink: string;
+}
+
+export const projectItem: ProjectItem[] = [
 	{
 		id: 1,
 		title: "SwarmScape",
-		href: "/project/",
 		src: swarmscape,
 		links: [
-			{
-				id: 1,
-				title: "Computer vision",
-				href: "/project/",
-			},
-			{
-				id: 2,
-				title: "Machine learning",
-				href: "/project/",
-			},
+			{ id: 1, title: "Computer Vision" },
+			{ id: 2, title: "Machine Learning" },
 		],
+		description: "SwarmScape is an AI-powered Greenhouse using Swarm Robotics...",
+		features: [
+			"XXX",
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		projectLink: "https://github.com/your-repo-link"
 	},
+	// ... other projects
 ];
 
 // Core Items

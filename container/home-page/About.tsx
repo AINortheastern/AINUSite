@@ -17,16 +17,15 @@ export default function About() {
 	const x = useTransform(scrollXProgress, [0, 1], ["1%", "-95%"]);
 
  	const images = [
-		"/AaravGambhir.jpg",
-		"/AlexzanderSansiveri.png",
-		"/AnthonyCampos.jpeg",
-		"/BrandonButler.jpg",
-		"/CharlesCiampa.jpg",
-		"/DhruvReddy.jpg",
-	].map((url, index) => ({
+		"/Carousel6.JPG",
+		"/Carousel7.JPG",
+		"/Carousel5.JPG",
+		"/Carousel4.jpg",
+		"/Carousel2.webp",
+ 	].map((url, index) => ({
 		url,
-		title: `Event ${index + 1}`,
-		description: `Description for event ${index + 1}`,
+		// title: `Event ${index + 1}`,
+		// description: `Swarmscape ${index + 1}`,
 	}));
 
 	const containerVariants = {
@@ -81,8 +80,17 @@ export default function About() {
 		},
 	};
 
-	const missionText = "AI Northeastern is committed to transforming the landscape of artificial intelligence at Northeastern University, Boston, and beyond by serving as a valuable resource, enhancing knowledge and understanding of AI.";
-	const missionWords = missionText.split(" ");
+	const missionText = [
+		{ text: "AI Northeastern", bold: true },
+		{ text: " is committed to transforming the landscape of artificial intelligence at Northeastern University, Boston, and beyond by serving as a valuable resource, enhancing knowledge and understanding of AI. Our core principles are inclusiveness, interdisciplinarity, responsibility, innovation, and collaboration.", bold: false }
+	];
+
+	const missionWords = missionText.flatMap(segment => 
+		segment.text.split(" ").map(word => ({
+			word,
+			bold: segment.bold
+		}))
+	);
 
 	const nextSlide = () => {
 		if (currentIndex < images.length - 1) {
@@ -120,7 +128,7 @@ export default function About() {
 					className="mb-16 relative"
 				>
 					<motion.div
-						className="flex flex-wrap gap-2"
+						className="flex flex-wrap gap-[0.5em]"
 						initial="hidden"
 						animate={textInView ? "visible" : "hidden"}
 						variants={{
@@ -131,13 +139,13 @@ export default function About() {
 							},
 						}}
 					>
-						{missionWords.map((word, i) => (
+						{missionWords.map((item, i) => (
 							<motion.span
 								key={i}
 								variants={wordAnimation}
-								className="inline-block font-medium text-3xl md:text-4xl text-white font-NeueMontreal tracking-wide leading-relaxed"
+								className={`inline-block font-${item.bold ? 'bold' : 'medium'} text-5xl md:text-4xl text-black font-NeueMontreal tracking-[0.02em] leading-[1.55]`}
 							>
-								{word}
+								{item.word}
 							</motion.span>
 						))}
 					</motion.div>
@@ -179,15 +187,16 @@ export default function About() {
 								variants={textAnimation}
 								className="text-2xl md:text-3xl font-light text-white/90 tracking-normal leading-relaxed"
 							>
-								<span className="font-semibold text-white">AI NU</span> hosts a weekly reading group to discuss papers in AI, bringing together
-								students and experts to deepen their understanding.
+								<h1 className="text-6xl md:text-7xl font-bold text-white mb-8"> 
+									What to expect? 
+								</h1>
+								<span className="font-semibold text-white text-4xl">AI NU</span> ha weekly reading group to discuss papers in AI, bringing together students and experts to deepen their understanding. Additionally, we organize hackathons to foster innovation and skill-building, and feature guest speakers who are leaders in the field of AI.
 							</motion.p>
 							<motion.p 
 								variants={textAnimation}
-								className="text-2xl md:text-3xl font-light text-white/90 tracking-normal leading-relaxed"
+								className="text-4xl md:text-3xl font-light text-white/90 tracking-normal leading-relaxed"
 							>
-								Additionally, we organize <span className="font-semibold text-white">hackathons</span> to foster innovation and skill-building, 
-								and feature <span className="font-semibold text-white">guest speakers</span> who are leaders in the field of AI.
+								With a focus on collaboration and responsibility, AI NU empowers the next generation of AI practitioners, driving innovation and growth in the AI community.
 							</motion.p>
 						</motion.div>
 					</motion.div>
@@ -232,7 +241,7 @@ export default function About() {
 					whileInView={{ opacity: 1 }}
 					transition={{ duration: 1 }}
 				>
-					<h2 className="text-2xl font-medium text-white mb-8">Featured Moments</h2>
+					<h2 className="text-5xl font-medium text-white mb-8">Featured Moments</h2>
 
  					<div className="absolute right-0 top-0 flex items-center gap-4">
 						<span className="text-white/70 text-sm">
@@ -307,13 +316,13 @@ export default function About() {
 										<div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10" />
 										<Image
 											src={image.url}
-											alt={image.title}
+											alt={image.url}
 											fill
 											className="object-cover"
 										/>
 										<div className="absolute bottom-6 left-6 z-20 text-white">
-											<h3 className="text-xl font-bold mb-2">{image.title}</h3>
-											<p className="text-sm opacity-80">{image.description}</p>
+											{/* <h3 className="text-xl font-bold mb-2">{image.title}</h3>
+											<p className="text-sm opacity-80">{image.description}</p> */}
 										</div>
 									</div>
 								</motion.div>
