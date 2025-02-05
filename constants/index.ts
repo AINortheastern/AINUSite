@@ -134,12 +134,11 @@ export const projectItem: ProjectItem[] = [
 			{ id: 1, title: "Computer Vision" },
 			{ id: 2, title: "Machine Learning" },
 		],
-		description: "SwarmScape is an AI-powered Greenhouse using Swarm Robotics...",
+		description: `Swarmscape is an AI Club initiative dedicated to tackling global food scarcity by transforming greenhouse farming through swarm robotics and Google Vertex AI. Our around-the-clock automated greenhouse system employs robots to gather environmental data, detect pests and diseases, and optimize plant growth. A Raspberry Pi 4 equipped with a camera captures plant images, while a Pololu 3pi+ handles greenhouse navigation. All collected data is processed in Google Vertex AI for real-time decisions, boosting harvest efficiency and sustainability. Anyone can contribute. Join us to help revolutionize modern agriculture.`,
 		features: [
-			"XXX",
-			"XXX",
-			"XXX",
-			"XXX"
+			"Finalizing code for robots to navigate a greenhouse",
+			"Building an AI through Vertex AI for data analysis and automated decision-making",
+			"Testing drones to capture aerial data for improved insights"
 		],
 		projectLink: "https://github.com/your-repo-link"
 	},

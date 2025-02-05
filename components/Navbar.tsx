@@ -12,7 +12,7 @@ export default function Navbar() {
 	const [hidden, setHidden] = useState(false);
 	const { scrollY } = useScroll();
 	const router = useRouter();
-	const isHomePage = router.pathname === "/";
+	const isHomePage = router.asPath === "/";
 
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		const previous = scrollY.getPrevious();

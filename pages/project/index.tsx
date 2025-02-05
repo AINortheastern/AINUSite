@@ -207,8 +207,8 @@ export default function Work() {
 													transition={{ duration: 0.5, delay: 0.4 }}
 													className="text-3xl leading-relaxed text-gray-700 mb-12 font-NeueMontreal"
 												>
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-													incididunt ut labore et dolore magna aliqua.
+													Swarmscape is an AI Club initiative dedicated to tackling global food scarcity by transforming greenhouse farming through swarm robotics and Google Vertex AI. 
+													Our around-the-clock automated greenhouse system employs robots to gather environmental data, detect pests and diseases, and optimize plant growth. A Raspberry Pi 4 equipped with a camera captures plant images, while a Pololu 3pi+ handles greenhouse navigation. All collected data is processed in Google Vertex AI for real-time decisions, boosting harvest efficiency and sustainability. Anyone can contribute. Join us to help revolutionize modern agriculture.
 												</motion.p>
 												
 												<motion.div 
