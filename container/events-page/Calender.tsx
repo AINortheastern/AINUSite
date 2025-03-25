@@ -22,7 +22,7 @@ interface Event {
 const sectionColors: { [key: string]: string } = {
 	"HACKATHON EVENT": "#9370DB",     
 	"AI BOOTCAMP SERIES": "#1E90FF",   
-	"GENERAL MEETINGS": "#4F7942",     
+	"AI FORUM MEETINGS": "#4F7942",     
 	"RECURRING EVENTS": "#CD853F",     
 };
 
@@ -32,73 +32,73 @@ const Calendar = () => {
 			
 		// ],
 		"HACKATHON EVENT": [
-			{
-				title: "InnovAIte",
-				date: "February 15-16",
-				time: "All Day",
-				location: "Curry Student Center",
-				description: "InnovAIte hackathon event",
-			},
+			// {
+			// 	title: "InnovAIte",
+			// 	date: "February 15-16",
+			// 	time: "All Day",
+			// 	location: "Curry Student Center",
+			// 	description: "InnovAIte hackathon event",
+			// },
 		],
 		"AI BOOTCAMP SERIES": [
-			{
-				title: "Introduction to AI, Math Essentials, and Python Basics",
-				date: "January 22nd",
-				time: "6:00 PM",
-				location: "108 West Village G",
-				description: "First session of AI Bootcamp covering fundamentals",
-			},
-			{
-				title: "Data Preprocessing and Exploratory Data Analysis (EDA)",
-				date: "February 5th",
-				time: "6:00 PM",
-				location: "108 West Village G",
-				description: "Learn about data preparation and analysis techniques",
-			},
-			{
-				title: "Supervised Learning Basics: Regression & Classification",
-				date: "February 19th",
-				time: "6:00 PM",
-				location: "108 West Village G",
-				description: "Introduction to fundamental machine learning concepts",
-			},
-			{
-				title: "Neural Networks and Model Evaluation",
-				date: "March 12th",
-				time: "6:00 PM",
-				location: "108 West Village G",
-				description: "Deep learning fundamentals and model assessment",
-			},
+			// {
+			// 	title: "Introduction to AI, Math Essentials, and Python Basics",
+			// 	date: "January 22nd",
+			// 	time: "6:00 PM",
+			// 	location: "108 West Village G",
+			// 	description: "First session of AI Bootcamp covering fundamentals",
+			// },
+			// {
+			// 	title: "Data Preprocessing and Exploratory Data Analysis (EDA)",
+			// 	date: "February 5th",
+			// 	time: "6:00 PM",
+			// 	location: "108 West Village G",
+			// 	description: "Learn about data preparation and analysis techniques",
+			// },
+			// {
+			// 	title: "Supervised Learning Basics: Regression & Classification",
+			// 	date: "February 19th",
+			// 	time: "6:00 PM",
+			// 	location: "108 West Village G",
+			// 	description: "Introduction to fundamental machine learning concepts",
+			// },
+			// {
+			// 	title: "Neural Networks and Model Evaluation",
+			// 	date: "March 12th",
+			// 	time: "6:00 PM",
+			// 	location: "108 West Village G",
+			// 	description: "Deep learning fundamentals and model assessment",
+			// },
 		],
-		"GENERAL MEETINGS": [
-			{
-				title: "General Discussion Meeting",
-				date: "January 29th",
-				time: "6:00 pm",
-				location: "108 West Village G",
-				description: "Monthly general discussion meeting",
-			},
-			{
-				title: "General Meeting",
-				date: "February 12th",
-				time: "6:00 pm",
-				location: "108 West Village G",
-				description: "Regular general meeting",
-			},
-			{
-				title: "General Meeting",
-				date: "February 26th",
-				time: "6:00 pm",
-				location: "108 West Village G",
-				description: "Regular general meeting",
-			},
-			{
-				title: "E-Board Elections",
-				date: "March 19th",
-				time: "6:00 pm",
-				location: "108 West Village G",
-				description: "Executive Board Elections",
-			},
+		"AI FORUM MEETINGS": [
+			// {
+			// 	title: "General Discussion Meeting",
+			// 	date: "January 29th",
+			// 	time: "6:00 pm",
+			// 	location: "108 West Village G",
+			// 	description: "Monthly general discussion meeting",
+			// },
+			// {
+			// 	title: "General Meeting",
+			// 	date: "February 12th",
+			// 	time: "6:00 pm",
+			// 	location: "108 West Village G",
+			// 	description: "Regular general meeting",
+			// },
+			// {
+			// 	title: "General Meeting",
+			// 	date: "February 26th",
+			// 	time: "6:00 pm",
+			// 	location: "108 West Village G",
+			// 	description: "Regular general meeting",
+			// },
+			// {
+			// 	title: "E-Board Elections",
+			// 	date: "March 19th",
+			// 	time: "6:00 pm",
+			// 	location: "108 West Village G",
+			// 	description: "Executive Board Elections",
+			// },
 		],
 		"RECURRING EVENTS": [
 			{

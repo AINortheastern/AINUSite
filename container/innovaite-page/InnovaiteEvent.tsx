@@ -161,7 +161,6 @@ const InnovAIteEvent = () => {
 			<FAQ />
 		 
 			<section className="w-full mt-12 px-12 flex flex-col items-center">
-				{/* Centered Heading */}
 				<h2 className="text-3xl font-bold font-NeueMontreal text-[#394b3f] mb-6 text-center">
 					Contact us for Sponsoring
 				</h2>
@@ -217,7 +216,6 @@ const FAQ = () => {
 		setActiveAccordion((prev) => (prev === itemId ? null : itemId));
 	};
 
-	// Split items into two arrays for two columns
 	const midPoint = Math.ceil(faqItems.length / 2);
 	const leftColumnItems = faqItems.slice(0, midPoint);
 	const rightColumnItems = faqItems.slice(midPoint);

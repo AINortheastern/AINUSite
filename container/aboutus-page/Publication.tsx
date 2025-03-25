@@ -48,7 +48,6 @@ export default function Publication() {
 			</div> */}
 			</section>
 
-			{/* <section className="w-full min-h-screen"> */}
 			<div className="w-full flex flex-col justify-between">
 				<div className="w-full flex flex-col">
 					<div className="w-full margin padding-x">
@@ -89,11 +88,12 @@ export default function Publication() {
 							key={item.id}
 							className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
 						>
-							<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md bg-white">
+							<div className="w-full relative aspect-square overflow-hidden rounded-2xl shadow-md bg-white">
 								<Image
-									src={item.src}
+									src={item.src ?? "/default-image.png"}
 									alt={`${item.name}'s photo`}
-									className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+									fill
+									className="object-cover transform transition-transform duration-500 hover:scale-110"
 								/>
 							</div>
 							<div className="w-full text-center mt-4 space-y-1">
@@ -107,9 +107,6 @@ export default function Publication() {
 				</div>
 			</div>
 
-			{/**team members */}
-
-			{/* <section className="w-full min-h-screen"> */}
 			<div className="w-full flex flex-col justify-between">
 				<div className="w-full flex flex-col">
 					<div className="w-full margin padding-x">
@@ -121,7 +118,6 @@ export default function Publication() {
 					</div>
 				</div>
 			</div>
-			{/* </section> */}
 
 			<div className="w-full padding-x py-[30px]">
 				<div className="grid grid-cols-4 gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
@@ -130,11 +126,12 @@ export default function Publication() {
 							key={item.id}
 							className="flex flex-col items-center transform transition-all duration-300 hover:translate-y-[-8px]"
 						>
-							<div className="w-full aspect-square overflow-hidden rounded-2xl shadow-md">
+							<div className="w-full relative aspect-square overflow-hidden rounded-2xl shadow-md">
 								<Image
-									src={item.src}
+									src={item.src ?? "/default-image.png"}
 									alt={`${item.name}'s photo`}
-									className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+									fill
+									className="object-cover transform transition-transform duration-500 hover:scale-110"
 								/>
 							</div>
 							<div className="w-full text-center mt-4 space-y-1">

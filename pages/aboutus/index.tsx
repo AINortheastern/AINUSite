@@ -11,10 +11,8 @@ export default function Insights() {
 		})();
 	}, []);
 	return (
-		<>
-			<Curve backgroundColor={"#ffffff"}>
-				<Publicationinsights />
-			</Curve>
-		</>
+		<div className="bg-background min-h-screen">
+			<Publicationinsights />
+		</div>
 	);
 }

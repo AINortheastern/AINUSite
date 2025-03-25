@@ -26,8 +26,10 @@ export { default as ashrithaReddyKallem } from "./AshrithaReddyKallem.jpeg";
 export { default as nakulRajpal } from "./NakulRajpal.webp";
 export { default as oliviaZhou } from "./OliviaZhou2.png";
 export { default as matthewGarcia } from "./MatthewGarcia.png";
-export { default as muskanBhatt } from "./MuskanBhatt.png";
+// export { default as muskanBhatt } from "./MuskanBhatt.png";
 export { default as jasonBalayev } from "./JasonAI.jpg";
 export { default as averyDarlington } from "./AveryDarlington.png";
 
 export { default as swarmscape } from "./swarm2.png";
+export { default as dhruvReddy } from "./DhruvNew.png";
+export { default as maximIlin } from "./Maxim.png";

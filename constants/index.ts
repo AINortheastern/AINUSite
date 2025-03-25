@@ -15,9 +15,11 @@ import {
 	oliviaZhou,
 	logo,
 	matthewGarcia,
-	muskanBhatt,
+	// muskanBhatt,
 	jasonBalayev,
 	averyDarlington,
+	dhruvReddy,
+	maximIlin,
 } from "@/public";
 import { StaticImageData } from "next/image";
 
@@ -42,6 +44,11 @@ export const navbarItems = [
 		id: 4,
 		title: "Projects",
 		href: "/project",
+	},
+	{
+		id: 5,
+		title: "Research",
+		href: "/research",
 	},
 ];
 
@@ -113,6 +120,11 @@ export const footernavbarItems = [
 		title: "Projects",
 		href: "project",
 	},
+	// {
+	// 	id: 6,
+	// 	title: "Research",
+	// 	href: "/research",
+	// },
 ];
 
 interface ProjectItem {
@@ -169,13 +181,13 @@ export const coreMemberes = [
 		id: 4,
 		name: "Nick Voyzey",
 		designation: "Marketing Head",
-		src: nickVoyzey, // Replace with correct image when available
+		src: nickVoyzey, 
 	},
 	{
 		id: 5,
 		name: "Aditi Rathi",
 		designation: "Marketing Head",
-		src: aditiRathi, // Replace with correct image when available
+		src: aditiRathi, 
 	},
 	{
 		id: 6,
@@ -193,14 +205,15 @@ export const coreMemberes = [
 		id: 8,
 		name: "Anthony Campos",
 		designation: "Event Coordinator",
-		src: anthonyCampos, // Replace with correct image when available
+		src: anthonyCampos, 
 	},
 	{
 		id: 9,
 		name: "Nakul Rajpal",
 		designation: "Secretary",
-		src: nakulRajpal, // Replace with correct image when available
+		src: nakulRajpal,  
 	},
+	
 ];
 
 // Additional Members
@@ -232,33 +245,33 @@ export const additionalMembers = [
 	{
 		id: 14,
 		name: "Naomi Wiley",
-		designation: "Forum content creator",
+		designation: "Forum Content Creator",
 		src: naomiWiley,
 	},
-	// {
-	//   id: 15,
-	//   name: "Dhruv Reddy Tekulapalli",
-	//   designation: "Project Lead",
-	//   src: dhruvReddy,
-	// },
-	// {
-	//   id: 16,
-	//   name: "Ashritha Reddy Kallem",
-	//   designation: "Outreach Associate",
-	//   src: ashrithaReddyKallem,
-	// },
+	{
+		id: 15,
+		name: "Dhruv Reddy Tekulapalli",
+		designation: "Project Lead",
+		src: dhruvReddy	},
+	  {
+		id: 16,
+		name: "Maxim Ilin",
+		designation: "Deputy Project Lead",
+		src: maximIlin,
+	  },
+
 	// {
 	//   id: 17,
 	//   name: "Matthew Garcia",
 	//   designation: "Reading Group Lead",
 	//   src: matthewGarcia,
 	// },
-	{
-		id: 18,
-		name: "Muskan Bhatt",
-		designation: "Sponsorship Assoc.",
-		src: muskanBhatt,
-	},
+	// {
+	// 	id: 18,
+	// 	name: "Muskan Bhatt",
+	// 	designation: "Sponsorship Assoc.",
+	// 	src: muskanBhatt,
+	// },
 	{
 		id: 19,
 		name: "Jason Balayev",

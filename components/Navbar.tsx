@@ -55,7 +55,7 @@ export default function Navbar() {
 								src="/ai-neu-text.png"
 								alt="ai neu logo"
 								width={200}
-								height={200}
+								height={200} 
 								priority
 							/>
 						</Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
 							key={item.id}
 							className={`w-fit text-3xl font-extrabold font-NeueMontreal ${
 								isHomePage ? "text-black" : "text-white"
-							} capitalize flex flex-col hover tracking-wide ${item.id === 5 && "ml-auto"}`}
+							} capitalize flex flex-col hover tracking-wide`}
 							href={item.href}
 						>
 							<TextHover titile1={item.title} titile2={item.title} isHomePage={isHomePage} />
