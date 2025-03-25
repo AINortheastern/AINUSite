@@ -11,7 +11,8 @@ const TextSection = ({
 	items, 
 	fromRight = false,
 	delay = 0,
-	className = ""
+	className = "",
+	id
 }: {
 	title: string;
 	description?: string;
@@ -19,6 +20,7 @@ const TextSection = ({
 	fromRight?: boolean;
 	delay?: number;
 	className?: string;
+	id?: string;
 }) => (
 	<motion.div
 		initial={{ 
@@ -38,7 +40,7 @@ const TextSection = ({
 			duration: 0.8
 		}}
 		className={`max-w-3xl ${fromRight ? 'ml-auto mr-8 md:mr-16 lg:mr-24' : 'ml-8 md:ml-16 lg:ml-24'} mb-20 ${className}`}
-		id={title.toLowerCase().replace(/\s+/g, '-')}
+		id={id}
 	>
 		<div className="bg-white bg-opacity-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
 			<h2 className="text-5xl font-bold mb-8 text-secondry">{title}</h2>
@@ -434,7 +436,8 @@ const ResearchContent = () => {
 					text: "Students hesitate to commit without testing diverse research approaches"
 				}
 			],
-			fromRight: false
+			fromRight: false,
+			id: "problem"
 		},
 		{
 			title: "Open Exploration",
@@ -502,7 +505,8 @@ const ResearchContent = () => {
 			title: "Publications",
 			description: "Coming soon!!!",
 			items: [],
-			fromRight: false
+			fromRight: false,
+			id: "publications"
 		},
 		{
 			title: "Join Us",
@@ -524,7 +528,8 @@ const ResearchContent = () => {
 					text: "Your request will be reviewed within 3 business days."
 				}
 			],
-			fromRight: true
+			fromRight: true,
+			id: "join-us"
 		},
 		{
 			title: "Team",
@@ -585,6 +590,7 @@ const ResearchContent = () => {
 					key={section.title}
 					{...section}
 					delay={index * 0.2}
+					id={section.id}
 					className={section.title === "Mentorship" ? "mt-20" : ""}
 				/>
 			))}
@@ -600,6 +606,7 @@ const ResearchContent = () => {
 					{...section}
 					delay={(publicationsIndex + 1 + index) * 0.2}
 					className=""
+					id={section.id}
 				/>
 			))}
 			
