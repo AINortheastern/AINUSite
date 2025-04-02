@@ -190,7 +190,7 @@ export default function About() {
 								<h1 className="text-6xl md:text-7xl font-bold text-white mb-8"> 
 									What to expect? 
 								</h1>
-								<span className="font-semibold text-white text-4xl">AI NU</span> ha weekly reading group to discuss papers in AI, bringing together students and experts to deepen their understanding. Additionally, we organize hackathons to foster innovation and skill-building, and feature guest speakers who are leaders in the field of AI.
+								<span className="font-semibold text-white text-4xl">AI NU</span> has weekly reading group to discuss papers in AI, bringing together students and experts to deepen their understanding. Additionally, we organize hackathons to foster innovation and skill-building, and feature guest speakers who are leaders in the field of AI.
 							</motion.p>
 							<motion.p 
 								variants={textAnimation}
